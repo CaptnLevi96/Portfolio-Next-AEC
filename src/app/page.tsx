@@ -1,101 +1,95 @@
-import Image from "next/image";
+'use client'
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+ const titles = ["Infographe", "Développeur web", "Designer web"];
+ const [titleIndex, setTitleIndex] = useState(0);
+ const [displayText, setDisplayText] = useState('');
+ const [isDeleting, setIsDeleting] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+ useEffect(() => {
+   const currentTitle = titles[titleIndex];
+   const typeSpeed = isDeleting ? 100 : 200;
+
+   if (!isDeleting && displayText === currentTitle) {
+     setTimeout(() => setIsDeleting(true), 2000);
+     return;
+   }
+
+   if (isDeleting && displayText === '') {
+     setIsDeleting(false);
+     setTitleIndex((prev) => (prev + 1) % titles.length);
+     return;
+   }
+
+   const timeout = setTimeout(() => {
+     setDisplayText(prev => 
+       isDeleting 
+         ? prev.slice(0, -1)
+         : currentTitle.slice(0, prev.length + 1)
+     );
+   }, typeSpeed);
+
+   return () => clearTimeout(timeout);
+ }, [titleIndex, displayText, isDeleting]);
+
+ return (
+   <div className="min-h-screen bg-[#E6FFE6] text-gray-900 font-sans">
+     <Head>
+       <title>Mon Portfolio</title>
+       <meta name="description" content="Portfolio professionnel de Levi" />
+     </Head>
+     
+     <header className="py-4 px-8 flex justify-between items-center fixed w-full bg-[#E6FFE6]/90 backdrop-blur-md z-50 shadow-sm">
+       <h1 className="text-3xl font-bold text-[#1a472a] tracking-tight">LEVI LOSEKE</h1>
+       <nav>
+         <ul className="flex space-x-10 text-lg">
+           <li><Link href="/" className="hover:text-[#40c057] transition-colors">Accueil</Link></li>
+           <li><Link href="/a-propos" className="hover:text-[#40c057] transition-colors">À propos</Link></li>
+           <li><Link href="/projets" className="hover:text-[#40c057] transition-colors">Projets</Link></li>
+           <li><Link href="/contact" className="hover:text-[#40c057] transition-colors">Contact</Link></li>
+         </ul>
+       </nav>
+     </header>
+
+     <main className="max-w-7xl mx-auto px-8 pt-28">
+       <div className="flex justify-between items-center gap-12">
+         <div className="max-w-2xl">
+           <h2 className="text-7xl font-bold mb-8 leading-tight">
+             <span className="text-[#40c057] block mb-4">Bonjour!, Je suis un</span>
+             <span className="text-[#1a472a] min-h-[1.2em] block">
+               {displayText}
+               <span className="animate-pulse">|</span>
+             </span>
+           </h2>
+           <p className="text-gray-600 mb-10 text-xl leading-relaxed">
+             Développeur web passionné par la création d'expériences digitales innovantes.
+           </p>
+           <div className="flex gap-6">
+             <button className="bg-[#40c057] text-white px-10 py-4 rounded-full hover:bg-[#2b8a3e] transition-all hover:shadow-lg">
+               Me Contacter
+             </button>
+             <button className="border-2 border-[#40c057] text-[#1a472a] px-10 py-4 rounded-full hover:bg-[#40c057] hover:text-white transition-all hover:shadow-lg">
+               Mon CV
+             </button>
+           </div>
+         </div>
+         
+         <div className="relative">
+           <Image 
+             src="/hero-image.png"
+             alt="Developer illustration"
+             width={384}
+             height={384}
+             priority
+             className="w-96 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(64,192,87,0.3)] transition-all duration-300"
+           />
+         </div>
+       </div>
+     </main>
+   </div>
+ );
 }
