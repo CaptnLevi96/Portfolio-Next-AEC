@@ -57,8 +57,7 @@ export default function Home() {
     {!isLoaded && (
       <div className="fixed inset-0 flex items-center justify-center bg-[#1a472a] text-white z-50 transition-all duration-1000">
         <div className="flex flex-col items-center justify-center text-8xl font-bold animate-pulse leading-tight">
-          <span className="mb-2">LEVI</span>
-          <span className="mt-2">LOSEKE</span>
+          <span className="mb-2">[LEVI LOSEKE]</span>
         </div>
       </div>
     )}
