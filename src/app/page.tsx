@@ -141,7 +141,7 @@ export default function Home() {
                  alt="Laptop illustration"
                  width={500}
                  height={400}
-                 className="animate-float"
+                 className="animate-float hover:shadow-[0_20px_50px_rgba(64,192,87,0.3)] transition-all duration-300 rounded-[50px]"
                  priority
                />
              </div>
