@@ -21,3 +21,21 @@ body {
 }
 
 
+@keyframes disappear {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes shatter {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(0); }
+}
+
+.loader {
+  animation: disappear 1s forwards;
+}
+
+.shatter {
+  animation: shatter 1s forwards;
+}
