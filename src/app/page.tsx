@@ -106,7 +106,7 @@ export default function Home() {
           fixed 
           left-1/2 
           -translate-x-1/2 
-          bg-[#E6FFE6]/90 
+          bg-[#a4e0b0]/90 
           backdrop-blur-md 
           z-50 
           shadow-sm 
