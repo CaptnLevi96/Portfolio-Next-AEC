@@ -15,42 +15,53 @@ export default function Home() {
   const [isShattering, setIsShattering] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [sectionsVisible, setSectionsVisible] = useState({
+    home: false,
+    about: false
+  });
 
-  // Gestion du scroll pour la navbar
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      if (currentScrollY < lastScrollY) {
-        // Scrolling up
-        setIsNavVisible(true);
-      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down and not at the top
-        setIsNavVisible(false);
-      }
-      
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [lastScrollY]);
-
-  // Original loading effect
+  // Gestion de la séquence de chargement initiale
   useEffect(() => {
     setTimeout(() => {
       setIsShattering(true);
       setTimeout(() => {
         setIsLoaded(true);
-        setTimeout(() => setShowContent(true), 500);
+        setTimeout(() => {
+          setShowContent(true);
+          setSectionsVisible(prev => ({ ...prev, home: true }));
+        }, 500);
       }, 1000);
     }, 2000);
   }, []);
 
-  // Typing effect
+  // Gestion du scroll pour la navbar et la révélation des sections
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Gestion de la visibilité de la navbar
+      if (currentScrollY < lastScrollY) {
+        setIsNavVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsNavVisible(false);
+      }
+      setLastScrollY(currentScrollY);
+
+      // Révélation des sections au scroll
+      const aboutSection = document.getElementById('about');
+      if (aboutSection) {
+        const aboutTop = aboutSection.getBoundingClientRect().top;
+        if (aboutTop < window.innerHeight * 0.75) {
+          setSectionsVisible(prev => ({ ...prev, about: true }));
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
+  // Effet de typing
   useEffect(() => {
     const currentTitle = titles[titleIndex];
     const typeSpeed = isDeleting ? 100 : 200;
@@ -88,7 +99,7 @@ export default function Home() {
         </div>
       )}
 
-      {/* Header avec nouvelle gestion du scroll */}
+      {/* Header avec navigation */}
       <header 
         className={`
           py-4 
@@ -132,10 +143,22 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Main Content */}
-      <div className={`transition-all duration-1000 ease-in-out ${isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
+      {/* Contenu Principal */}
+      <div>
         {/* Hero Section */}
-        <section id="home" className="min-h-screen flex items-center bg-[#E6FFE6]">
+        <section 
+          id="home" 
+          className={`
+            min-h-screen 
+            flex 
+            items-center 
+            bg-[#E6FFE6]
+            transition-all 
+            duration-1000 
+            ease-in-out
+            ${sectionsVisible.home ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
+          `}
+        >
           <div className="max-w-7xl mx-auto px-8 pt-28">
             <div className="flex justify-between items-center gap-12">
               <div className="max-w-2xl">
@@ -174,7 +197,19 @@ export default function Home() {
         </section>
 
         {/* Experience Section */}
-        <section id="about" className="min-h-screen bg-[#0a0a1f] text-white py-20">
+        <section 
+          id="about" 
+          className={`
+            min-h-screen 
+            bg-[#0a0a1f] 
+            text-white 
+            py-20
+            transition-all 
+            duration-1000 
+            ease-in-out
+            ${sectionsVisible.about ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
+          `}
+        >
           <div className="max-w-7xl mx-auto px-8">
             <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#40c057] to-[#69db7c] text-transparent bg-clip-text">
               Mon parcours professionnel
