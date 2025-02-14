@@ -333,14 +333,14 @@ export default function Home() {
         {/* Section Parcours Académique */}
 <section className="min-h-screen bg-gradient-to-b from-[#1b1b55] to-[#2a2a6a] text-white py-20">
   <div className="max-w-7xl mx-auto px-8">
-    <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#40c057] to-[#69db7c] text-transparent bg-clip-text animate-gradient">
+    <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#9bb4f9] to-[#6a7fb8] text-transparent bg-clip-text animate-gradient">
       Mon parcours académique
     </h2>
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div className="space-y-8 relative">
         {/* Ligne de temps verticale */}
-        <div className="absolute left-6 top-8 bottom-8 w-1 bg-gradient-to-b from-[#40c057] to-[#69db7c] rounded-full"></div>
+        <div className="absolute left-6 top-8 bottom-8 w-1 bg-gradient-to-b from-[#9bb4f9] to-[#9bb4f9] rounded-full"></div>
 
         {[
           {
@@ -370,7 +370,7 @@ export default function Home() {
             className="group relative pl-16 transition-all duration-500 hover:pl-20"
           >
             {/* Point sur la ligne de temps */}
-            <div className="absolute left-5 w-3 h-3 bg-[#40c057] rounded-full transform transition-all duration-300 group-hover:scale-150 group-hover:bg-[#69db7c]"></div>
+            <div className="absolute left-5 w-3 h-3 bg-[#9bb4f9] rounded-full transform transition-all duration-300 group-hover:scale-150 group-hover:bg-[#9bb4f9]"></div>
 
             <div className="bg-[#1a1b83]/80 backdrop-blur-sm p-6 rounded-xl 
                           transition-all duration-300 transform hover:-translate-y-2 
