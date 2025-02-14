@@ -378,14 +378,14 @@ export default function Home() {
                           hover:bg-[#2a2a8a] border border-[#40c057]/20">
               <div className="flex flex-col gap-2">
                 <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-2xl font-bold text-[#40c057] group-hover:text-[#69db7c] transition-colors">
+                  <h3 className="text-2xl font-bold text-[#9bb4f9 group-hover:text-[#b7c9fa] transition-colors">
                     {edu.title}
                   </h3>
-                  <span className="text-sm px-3 py-1 bg-[#40c057]/20 rounded-full text-[#40c057]">
+                  <span className="text-sm px-3 py-1 bg-[#40c057]/20 rounded-full text-[#9bb4f9]">
                     {edu.period}
                   </span>
                 </div>
-                <p className="text-[#40c057]/90 text-lg mb-2">{edu.school}</p>
+                <p className="text-[#9bb4f9]/90 text-lg mb-2">{edu.school}</p>
                 <p className="text-gray-300 group-hover:text-white transition-colors">
                   {edu.description}
                 </p>
@@ -396,7 +396,7 @@ export default function Home() {
                     <span 
                       key={idx}
                       className="text-sm px-3 py-1 bg-[#40c057]/10 rounded-full
-                               text-[#40c057] hover:bg-[#40c057]/20 transition-all
+                               text-[#9bb4f9] hover:bg-[#40c057]/20 transition-all
                                transform hover:-translate-y-1 cursor-default"
                     >
                       {skill}
