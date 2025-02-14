@@ -121,7 +121,21 @@ export default function Home() {
       >
         <nav>
           <ul className="flex space-x-8 text-lg">
-            <li><a href="#home" className="hover:text-[#40c057] transition-colors">Accueil</a></li>
+            <li>
+              <a 
+                href="#home" 
+                className="hover:text-[#40c057] transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const homeSection = document.getElementById('home');
+                  if (homeSection) {
+                    homeSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Accueil
+              </a>
+            </li>
             <li>
               <a 
                 href="#about" 
@@ -195,6 +209,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
 
         {/* Experience Section */}
         <section 
@@ -280,6 +295,76 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+          {/* Section Parcours Académique */}
+          <section className="min-h-screen bg-[#0a0a1f] text-white py-20">
+          <div className="max-w-7xl mx-auto px-8">
+            <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#40c057] to-[#69db7c] text-transparent bg-clip-text">
+              Mon parcours académique
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "AEC - Développement de sites web transactionnels",
+                    school: "Collège Ahuntsic",
+                    period: "2024 - 2025 (en cours)",
+                    description: "Formation approfondie en développement web et programmation"
+                  },
+                  {
+                    title: "DEC - Infographie en prémédia",
+                    school: "Collège Ahuntsic",
+                    period: "2022",
+                    description: "Formation en design graphique et production média"
+                  },
+                  {
+                    title: "Diplôme d'étude secondaire",
+                    school: "École secondaire Horizon-Jeunesse",
+                    period: "2016",
+                    description: "Formation générale"
+                  }
+                ].map((edu, index) => (
+                  <div
+                    key={index}
+                    className="bg-[#1a1a3f]/80 backdrop-blur-sm p-6 rounded-xl hover:bg-[#2a2a4f] 
+                             transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg 
+                             hover:shadow-[#40c057]/20 group"
+                  >
+                    <div className="flex items-center gap-4 mb-2">
+                      <div className="w-12 h-12 bg-[#40c057]/20 rounded-full flex items-center justify-center
+                                    group-hover:bg-[#40c057]/30 transition-all duration-300">
+                        <span className="text-2xl">🎓</span>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-[#40c057]">{edu.title}</h3>
+                        <p className="text-[#40c057]/80">{edu.school}</p>
+                      </div>
+                      <span className="text-sm text-[#40c057]/70">{edu.period}</span>
+                    </div>
+                    <p className="text-gray-300 ml-16 transition-all duration-300 group-hover:text-white">
+                      {edu.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="relative flex justify-center">
+                <Image
+                  src="/education-image.png"
+                  alt="Education illustration"
+                  width={500}
+                  height={400}
+                  className="animate-float hover:shadow-[0_20px_50px_rgba(64,192,87,0.3)] transition-all duration-300 rounded-[50px]"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        
       </div>
     </div>
   );
