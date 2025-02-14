@@ -211,157 +211,226 @@ export default function Home() {
         </section>
 
 
-        {/* Experience Section */}
-        <section 
-          id="about" 
-          className={`
-            min-h-screen 
-            bg-[#0a0a1f] 
-            text-white 
-            py-20
-            transition-all 
-            duration-1000 
-            ease-in-out
-            ${sectionsVisible.about ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
-          `}
-        >
-          <div className="max-w-7xl mx-auto px-8">
-            <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#40c057] to-[#69db7c] text-transparent bg-clip-text">
-              Mon parcours professionnel
-            </h2>
+       {/* Experience Section */}
+<section 
+  id="about" 
+  className={`
+    min-h-screen 
+    bg-gradient-to-b from-[#0a0a1f] to-[#1b1b55]
+    text-white 
+    py-20
+    transition-all 
+    duration-1000 
+    ease-in-out
+    ${sectionsVisible.about ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
+  `}
+>
+  <div className="max-w-7xl mx-auto px-8">
+    <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#40c057] to-[#69db7c] text-transparent bg-clip-text animate-gradient">
+      Mon parcours professionnel
+    </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="relative flex justify-center">
-                <Image
-                  src="/laptop-experience.png"
-                  alt="Laptop illustration"
-                  width={500}
-                  height={400}
-                  className="animate-float hover:shadow-[0_20px_50px_rgba(64,192,87,0.3)] transition-all duration-300 rounded-[50px]"
-                  priority
-                />
-              </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="relative flex justify-center">
+        <div className="relative group">
+          <Image
+            src="/laptop-experience.png"
+            alt="Laptop illustration"
+            width={500}
+            height={400}
+            className="animate-float rounded-[50px] transition-all duration-500
+                     group-hover:shadow-[0_20px_50px_rgba(64,192,87,0.3)]
+                     group-hover:scale-105"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#40c057]/20 to-transparent
+                       opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                       rounded-[50px]"></div>
+        </div>
+      </div>
 
-              <div className="space-y-6">
-                {[
-                  {
-                    title: "Infographe",
-                    company: "Flash Grafix",
-                    period: "Juin 2022 - Janvier 2024",
-                    description: "Création et conception graphique pour divers projets d'impression et de communication visuelle"
-                  },
-                  {
-                    title: "Aide pressier",
-                    company: "SupremeX Inc.",
-                    period: "Mai 2022 - Juin 2022",
-                    description: "Support aux opérations d'impression et contrôle qualité"
-                  },
-                  {
-                    title: "Préparateur de commandes",
-                    company: "Hose Power Canada",
-                    period: "Mai 2021 - Janvier 2022",
-                    description: "Gestion logistique et préparation précise des commandes clients"
-                  },
-                  {
-                    title: "Imprimeur sur presse numérique",
-                    company: "Bureau en gros",
-                    period: "Mai 2019 - Août 2019",
-                    description: "Production d'impressions numériques et service client personnalisé"
-                  }
-                ].map((exp, index) => (
-                  <div
-                    key={index}
-                    className="bg-[#1a1a3f]/80 backdrop-blur-sm p-6 rounded-xl hover:bg-[#2a2a4f] 
-                             transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg 
-                             hover:shadow-[#40c057]/20 group"
-                  >
-                    <div className="flex items-center gap-4 mb-2">
-                      <div className="w-12 h-12 bg-[#40c057]/20 rounded-full flex items-center justify-center
-                                    group-hover:bg-[#40c057]/30 transition-all duration-300">
-                        <span className="text-2xl">💼</span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-[#40c057]">{exp.title}</h3>
-                        <p className="text-[#40c057]/80">{exp.company}</p>
-                      </div>
-                      <span className="text-sm text-[#40c057]/70">{exp.period}</span>
-                    </div>
-                    <p className="text-gray-300 ml-16 transition-all duration-300 group-hover:text-white">
-                      {exp.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+      <div className="space-y-8 relative">
+        {/* Ligne de temps verticale */}
+        <div className="absolute left-6 top-8 bottom-8 w-1 bg-gradient-to-b from-[#40c057] to-[#69db7c] rounded-full"></div>
 
-          {/* Section Parcours Académique */}
-          <section className="min-h-screen bg-[#0a0a1f] text-white py-20">
-          <div className="max-w-7xl mx-auto px-8">
-            <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#40c057] to-[#69db7c] text-transparent bg-clip-text">
-              Mon parcours académique
-            </h2>
+        {[
+          {
+            title: "Infographe",
+            company: "Flash Grafix",
+            period: "Juin 2022 - Janvier 2024",
+            description: "Création et conception graphique pour divers projets d'impression et de communication visuelle",
+            skills: ["Adobe Suite", "Design", "Mise en page", "Gestion de projet", "Service client"]
+          },
+          {
+            title: "Aide pressier",
+            company: "SupremeX Inc.",
+            period: "Mai 2022 - Juin 2022",
+            description: "Support aux opérations d'impression et contrôle qualité",
+            skills: ["Contrôle qualité", "Travail d'équipe", "Organisation"]
+          },
+          {
+            title: "Préparateur de commandes",
+            company: "Hose Power Canada",
+            period: "Mai 2021 - Janvier 2022",
+            description: "Gestion logistique et préparation précise des commandes clients",
+            skills: ["Logistique", "Organisation", "Service client", "Gestion des stocks"]
+          },
+          {
+            title: "Imprimeur sur presse numérique",
+            company: "Bureau en gros",
+            period: "Mai 2019 - Août 2019",
+            description: "Production d'impressions numériques et service client personnalisé",
+            skills: ["Impression numérique", "Service client", "Gestion du temps"]
+          }
+        ].map((exp, index) => (
+          <div
+            key={index}
+            className="group relative pl-16 transition-all duration-500 hover:pl-20"
+          >
+            {/* Point sur la ligne de temps */}
+            <div className="absolute left-5 w-3 h-3 bg-[#40c057] rounded-full transform transition-all duration-300 group-hover:scale-150 group-hover:bg-[#69db7c]"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                {[
-                  {
-                    title: "AEC - Développement de sites web transactionnels",
-                    school: "Collège Ahuntsic",
-                    period: "2024 - 2025 (en cours)",
-                    description: "Formation approfondie en développement web et programmation"
-                  },
-                  {
-                    title: "DEC - Infographie en prémédia",
-                    school: "Collège Ahuntsic",
-                    period: "2022",
-                    description: "Formation en design graphique et production média"
-                  },
-                  {
-                    title: "Diplôme d'étude secondaire",
-                    school: "École secondaire Horizon-Jeunesse",
-                    period: "2016",
-                    description: "Formation générale"
-                  }
-                ].map((edu, index) => (
-                  <div
-                    key={index}
-                    className="bg-[#1a1a3f]/80 backdrop-blur-sm p-6 rounded-xl hover:bg-[#2a2a4f] 
-                             transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg 
-                             hover:shadow-[#40c057]/20 group"
-                  >
-                    <div className="flex items-center gap-4 mb-2">
-                      <div className="w-12 h-12 bg-[#40c057]/20 rounded-full flex items-center justify-center
-                                    group-hover:bg-[#40c057]/30 transition-all duration-300">
-                        <span className="text-2xl">🎓</span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-[#40c057]">{edu.title}</h3>
-                        <p className="text-[#40c057]/80">{edu.school}</p>
-                      </div>
-                      <span className="text-sm text-[#40c057]/70">{edu.period}</span>
-                    </div>
-                    <p className="text-gray-300 ml-16 transition-all duration-300 group-hover:text-white">
-                      {edu.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="relative flex justify-center">
-                <Image
-                  src="/education-image.png"
-                  alt="Education illustration"
-                  width={500}
-                  height={400}
-                  className="animate-float hover:shadow-[0_20px_50px_rgba(64,192,87,0.3)] transition-all duration-300 rounded-[50px]"
-                  priority
-                />
+            <div className="bg-[#1a1a3f]/80 backdrop-blur-sm p-6 rounded-xl 
+                        transition-all duration-300 transform hover:-translate-y-2 
+                        hover:shadow-xl hover:shadow-[#40c057]/20 
+                        hover:bg-[#2a2a4f] border border-[#40c057]/20">
+              <div className="flex flex-col gap-2">
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className="text-2xl font-bold text-[#40c057] group-hover:text-[#69db7c] transition-colors">
+                    {exp.title}
+                  </h3>
+                  <span className="text-sm px-3 py-1 bg-[#40c057]/20 rounded-full text-[#40c057]">
+                    {exp.period}
+                  </span>
+                </div>
+                <p className="text-[#40c057]/90 text-lg mb-2">{exp.company}</p>
+                <p className="text-gray-300 group-hover:text-white transition-colors">
+                  {exp.description}
+                </p>
+                
+                {/* Tags de compétences */}
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {exp.skills.map((skill, idx) => (
+                    <span 
+                      key={idx}
+                      className="text-sm px-3 py-1 bg-[#40c057]/10 rounded-full
+                             text-[#40c057] hover:bg-[#40c057]/20 transition-all
+                             transform hover:-translate-y-1 cursor-default"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+        {/* Section Parcours Académique */}
+<section className="min-h-screen bg-gradient-to-b from-[#1b1b55] to-[#2a2a6a] text-white py-20">
+  <div className="max-w-7xl mx-auto px-8">
+    <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#40c057] to-[#69db7c] text-transparent bg-clip-text animate-gradient">
+      Mon parcours académique
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="space-y-8 relative">
+        {/* Ligne de temps verticale */}
+        <div className="absolute left-6 top-8 bottom-8 w-1 bg-gradient-to-b from-[#40c057] to-[#69db7c] rounded-full"></div>
+
+        {[
+          {
+            title: "AEC - Développement de sites web transactionnels",
+            school: "Collège Ahuntsic",
+            period: "2024 - 2025 (en cours)",
+            description: "Formation approfondie en développement web et programmation",
+            skills: ["React", "Node.js", "Next.js", "TypeScript", "SQL"]
+          },
+          {
+            title: "DEC - Infographie en prémédia",
+            school: "Collège Ahuntsic",
+            period: "2022",
+            description: "Formation en design graphique et production média",
+            skills: ["Adobe Suite", "Design", "Mise en page", "Typographie"]
+          },
+          {
+            title: "Diplôme d'étude secondaire",
+            school: "École secondaire Horizon-Jeunesse",
+            period: "2016",
+            description: "Formation générale",
+            skills: ["Travail d'équipe", "Communication", "Organisation"]
+          }
+        ].map((edu, index) => (
+          <div
+            key={index}
+            className="group relative pl-16 transition-all duration-500 hover:pl-20"
+          >
+            {/* Point sur la ligne de temps */}
+            <div className="absolute left-5 w-3 h-3 bg-[#40c057] rounded-full transform transition-all duration-300 group-hover:scale-150 group-hover:bg-[#69db7c]"></div>
+
+            <div className="bg-[#1a1b83]/80 backdrop-blur-sm p-6 rounded-xl 
+                          transition-all duration-300 transform hover:-translate-y-2 
+                          hover:shadow-xl hover:shadow-[#40c057]/20 
+                          hover:bg-[#2a2a8a] border border-[#40c057]/20">
+              <div className="flex flex-col gap-2">
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className="text-2xl font-bold text-[#40c057] group-hover:text-[#69db7c] transition-colors">
+                    {edu.title}
+                  </h3>
+                  <span className="text-sm px-3 py-1 bg-[#40c057]/20 rounded-full text-[#40c057]">
+                    {edu.period}
+                  </span>
+                </div>
+                <p className="text-[#40c057]/90 text-lg mb-2">{edu.school}</p>
+                <p className="text-gray-300 group-hover:text-white transition-colors">
+                  {edu.description}
+                </p>
+                
+                {/* Tags de compétences */}
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {edu.skills.map((skill, idx) => (
+                    <span 
+                      key={idx}
+                      className="text-sm px-3 py-1 bg-[#40c057]/10 rounded-full
+                               text-[#40c057] hover:bg-[#40c057]/20 transition-all
+                               transform hover:-translate-y-1 cursor-default"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="relative flex justify-center">
+        <div className="relative group">
+          <Image
+            src="/education-image.png"
+            alt="Education illustration"
+            width={500}
+            height={400}
+            className="animate-float rounded-[50px] transition-all duration-500
+                       group-hover:shadow-[0_20px_50px_rgba(64,192,87,0.3)]
+                       group-hover:scale-105"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#40c057]/20 to-transparent
+                         opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                         rounded-[50px]"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
         
