@@ -430,9 +430,143 @@ export default function Home() {
   </div>
 </section>
 
+{/* Section Compétences */}
+<section className="min-h-screen bg-gradient-to-b from-[#2a2a6a] to-[#1a1a4f] text-white py-20">
+  <div className="max-w-7xl mx-auto px-8">
+    <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#6a7fb8] to-[#9370db] text-transparent bg-clip-text animate-gradient">
+      Mes compétences
+    </h2>
 
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {/* PROGRAMMATION */}
+      <div className="group">
+        <div className="bg-[#1a1a3f]/80 backdrop-blur-sm p-8 rounded-2xl 
+                    border border-[#6a7fb8]/20 transition-all duration-300
+                    hover:transform hover:-translate-y-2 hover:shadow-xl
+                    hover:shadow-[#6a7fb8]/20 hover:bg-[#2a2a4f]">
+          <h3 className="text-3xl font-bold mb-6 text-[#6a7fb8] group-hover:text-[#9370db] transition-colors">
+            Programmation
+          </h3>
+          <div className="space-y-4">
+            {[
+              { name: "HTML", level: 90 },
+              { name: "CSS", level: 85 },
+              { name: "JavaScript", level: 80 },
+              { name: "React", level: 70 },
+              { name: "Node.js", level: 70 },
+              { name: "Next.js", level: 75 },
+              { name: "TypeScript", level: 65 },
+              { name: "MySQL", level: 80 },
+              { name: "MongoDB", level: 60 },
+              { name: "PHP", level: 50 },
+              { name: "Laravel", level: 65 },
+              { name: "Docker", level: 40 }
+            ].map((skill, index) => (
+              <div key={index} className="relative">
+                <div className="flex justify-between mb-1">
+                  <span className="text-[#6a7fb8] group-hover:text-[#9370db] transition-colors">
+                    {skill.name}
+                  </span>
+                  <span className="text-[#6a7fb8] group-hover:text-[#9370db] transition-colors">
+                    {skill.level}%
+                  </span>
+                </div>
+                <div className="h-2 bg-[#1a1a3f] rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-[#6a7fb8] to-[#9370db] rounded-full
+                             transition-all duration-500 ease-out"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
+      {/* DESIGN */}
+      <div className="group">
+        <div className="bg-[#1a1a3f]/80 backdrop-blur-sm p-8 rounded-2xl 
+                    border border-[#6a7fb8]/20 transition-all duration-300
+                    hover:transform hover:-translate-y-2 hover:shadow-xl
+                    hover:shadow-[#6a7fb8]/20 hover:bg-[#2a2a4f]">
+          <h3 className="text-3xl font-bold mb-6 text-[#6a7fb8] group-hover:text-[#9370db] transition-colors">
+            Design
+          </h3>
+          <div className="space-y-4">
+            {[
+              { name: "Adobe Photoshop", level: 95 },
+              { name: "Adobe Illustrator", level: 95 },
+              { name: "Adobe InDesign", level: 90 },
+              { name: "Adobe XD", level: 90 },
+              { name: "Figma", level: 90 }
+            ].map((skill, index) => (
+              <div key={index} className="relative">
+                <div className="flex justify-between mb-1">
+                  <span className="text-[#6a7fb8] group-hover:text-[#9370db] transition-colors">
+                    {skill.name}
+                  </span>
+                  <span className="text-[#6a7fb8] group-hover:text-[#9370db] transition-colors">
+                    {skill.level}%
+                  </span>
+                </div>
+                <div className="h-2 bg-[#1a1a3f] rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-[#6a7fb8] to-[#9370db] rounded-full
+                             transition-all duration-500 ease-out"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
+      {/* AUTRES */}
+      <div className="group">
+        <div className="bg-[#1a1a3f]/80 backdrop-blur-sm p-8 rounded-2xl 
+                    border border-[#6a7fb8]/20 transition-all duration-300
+                    hover:transform hover:-translate-y-2 hover:shadow-xl
+                    hover:shadow-[#6a7fb8]/20 hover:bg-[#2a2a4f]">
+          <h3 className="text-3xl font-bold mb-6 text-[#6a7fb8] group-hover:text-[#9370db] transition-colors">
+            Autres
+          </h3>
+          <div className="space-y-4">
+            {[
+              { name: "Office 365", level: 85 },
+              { name: "Wordpress", level: 75 },
+              { name: "Git", level: 70 },
+              { name: "SEO", level: 65 },
+              { name: "UI/UX Design", level: 80 }
+            ].map((skill, index) => (
+              <div key={index} className="relative">
+                <div className="flex justify-between mb-1">
+                  <span className="text-[#6a7fb8] group-hover:text-[#9370db] transition-colors">
+                    {skill.name}
+                  </span>
+                  <span className="text-[#6a7fb8] group-hover:text-[#9370db] transition-colors">
+                    {skill.level}%
+                  </span>
+                </div>
+                <div className="h-2 bg-[#1a1a3f] rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-[#6a7fb8] to-[#9370db] rounded-full
+                             transition-all duration-500 ease-out"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+</section>
         
       </div>
     </div>
