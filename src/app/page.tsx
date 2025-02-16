@@ -439,7 +439,7 @@ export default function Home() {
 
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       {/* PROGRAMMATION */}
-      <div className="group">
+      <div className="group lg:row-span-2">
         <div className="bg-[#1a1a3f]/80 backdrop-blur-sm p-8 rounded-2xl 
                     border border-[#6a7fb8]/20 transition-all duration-300
                     hover:transform hover:-translate-y-2 hover:shadow-xl
@@ -561,11 +561,27 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Image sous Design et Autres */}
+      <div className="lg:col-span-2">
+        <div className="relative group">
+          <Image
+            src="/skills-image.png"
+            alt="Skills illustration"
+            width={600}
+            height={400}
+            className="rounded-[50px] transition-all duration-500
+                     group-hover:shadow-[0_20px_50px_rgba(106,127,184,0.3)]
+                     group-hover:scale-105 w-full"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#6a7fb8]/20 to-transparent
+                       opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                       rounded-[50px]"></div>
+        </div>
+      </div>
     </div>
-    
-    
   </div>
-  
 </section>
         
       </div>
