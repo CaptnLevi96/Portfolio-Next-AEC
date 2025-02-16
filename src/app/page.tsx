@@ -566,13 +566,13 @@ export default function Home() {
       <div className="lg:col-span-2">
         <div className="relative group">
           <Image
-            src="/skills-image.png"
+            src="/skills-image.svg"
             alt="Skills illustration"
             width={600}
-            height={400}
+            height={0}
             className="rounded-[50px] transition-all duration-500
                      group-hover:shadow-[0_20px_50px_rgba(106,127,184,0.3)]
-                     group-hover:scale-105 w-full"
+                     group-hover:scale-105"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#6a7fb8]/20 to-transparent
