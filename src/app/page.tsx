@@ -226,10 +226,13 @@ export default function Home() {
   `}
 >
   <div className="max-w-7xl mx-auto px-8">
-    <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#40c057] to-[#69db7c] text-transparent bg-clip-text animate-gradient">
+    <h2 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-[#40c057] to-[#69db7c] text-transparent bg-clip-text animate-gradient">
       Mon parcours professionnel
     </h2>
 
+<p className="text-gray-300 text-center text-xl max-w-3xl mx-auto mb-4">
+  Mon expérience professionnelle diversifiée m'a permis de développer des compétences variées, de l'infographie à la gestion de projet, en passant par le service client et la production.
+</p>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div className="relative flex justify-center">
         <div className="relative group">
@@ -333,10 +336,12 @@ export default function Home() {
         {/* Section Parcours Académique */}
 <section className="min-h-screen bg-gradient-to-b from-[#1b1b55] to-[#2a2a6a] text-white py-20">
   <div className="max-w-7xl mx-auto px-8">
-    <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#9bb4f9] to-[#6a7fb8] text-transparent bg-clip-text animate-gradient">
+    <h2 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-[#9bb4f9] to-[#6a7fb8] text-transparent bg-clip-text animate-gradient">
       Mon parcours académique
     </h2>
-
+    <p className="text-gray-300 text-center text-xl max-w-3xl mx-auto mb-12">
+      Ma formation combine créativité et technique, avec une spécialisation en développement web qui complète parfaitement mes compétences en design graphique.
+    </p>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div className="space-y-8 relative">
         {/* Ligne de temps verticale */}
@@ -433,9 +438,13 @@ export default function Home() {
 {/* Section Compétences */}
 <section className="min-h-screen bg-gradient-to-b from-[#2a2a6a] to-[#1a1a4f] text-white py-20">
   <div className="max-w-7xl mx-auto px-8">
-    <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#6a7fb8] to-[#9370db] text-transparent bg-clip-text animate-gradient">
+    <h2 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-[#6a7fb8] to-[#9370db] text-transparent bg-clip-text animate-gradient">
       Mes compétences
     </h2>
+    
+    <p className="text-gray-300 text-center text-xl max-w-3xl mx-auto mb-16">
+      Au fil de mes expériences et formations, j'ai développé une expertise technique approfondie, combinant programmation, design et outils digitaux pour créer des solutions web complètes.
+    </p>
 
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       {/* PROGRAMMATION */}
@@ -572,12 +581,12 @@ export default function Home() {
             height={0}
             className="rounded-[50px] transition-all duration-500
                      group-hover:shadow-[0_20px_50px_rgba(106,127,184,0.3)]
-                     group-hover:scale-105"
+                     group-hover:scale-105 ml-20"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#6a7fb8]/20 to-transparent
                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
-                       rounded-[50px]"></div>
+                       rounded-[50px] ml-20"></div>
         </div>
       </div>
     </div>
