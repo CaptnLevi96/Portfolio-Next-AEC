@@ -115,6 +115,7 @@ export default function Home() {
           mt-4
           transition-all 
           duration-300
+          font-bold
           ${isLoaded ? 'opacity-100' : 'opacity-0'}
           ${isNavVisible ? 'translate-y-0' : '-translate-y-full'}
         `}
@@ -176,24 +177,30 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-8 pt-28">
             <div className="flex justify-between items-center gap-12">
               <div className="max-w-2xl">
-                <h2 className="text-7xl font-bold mb-8 leading-tight">
-                  <span className="text-[#40c057] block mb-4">Bonjour!, Je suis</span>
-                  <span className="text-[#1a472a] min-h-[1.2em] block">
-                    {displayText}
-                    <span className="animate-pulse">|</span>
-                  </span>
-                </h2>
-                <p className="text-gray-600 mb-10 text-xl leading-relaxed">
-                  Développeur web passionné par la création d'expériences digitales innovantes.
-                </p>
+              <h2 className="text-7xl font-bold mb-8 leading-tight">
+              <span className="text-[#40c057] block mb-4 relative animate-float">
+                Bonjour!, Je suis
+                {/* Ajout d'éléments décoratifs */}
+              </span>
+              <span className="text-[#1a472a] min-h-[1.2em] block relative">
+                {displayText}
+                <span className="animate-pulse">|</span>
+              </span>
+            </h2>
+            <p className="text-#1f4b2e mb-10 text-xl leading-relaxed font-normal">
+           Développeur web passionné par la création d'expériences digitales innovantes. Fort d'une formation en infographie et en développement web, je combine créativité visuelle et expertise technique pour donner vie à des projets web uniques.<br/> <br/>Mon parcours polyvalent me permet d'apporter une vision globale, de la conception graphique à l'implémentation technique.
+          </p>
                 <div className="flex gap-6">
-                  <button className="bg-[#40c057] text-white px-10 py-4 rounded-full hover:bg-[#2b8a3e] transition-all hover:shadow-lg">
-                    Me Contacter
-                  </button>
-                  <button className="border-2 border-[#40c057] text-[#1a472a] px-10 py-4 rounded-full hover:bg-[#40c057] hover:text-white transition-all hover:shadow-lg">
-                    Mon CV
-                  </button>
-                </div>
+                <button className="group bg-[#40c057] text-white px-10 py-4 rounded-full hover:bg-[#2b8a3e] transition-all hover:shadow-lg relative overflow-hidden">
+                  <span className="relative z-10">Me Contacter</span>
+                  <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
+                </button>
+                
+                <button className="group border-2 border-[#40c057] text-[#1a472a] px-10 py-4 rounded-full hover:bg-[#40c057] hover:text-white transition-all hover:shadow-lg relative overflow-hidden">
+                  <span className="relative z-10">Mon CV</span>
+                  <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#40c057] to-[#69db7c] transition-all duration-300 group-hover:w-full -z-10"></div>
+                </button>
+              </div>
               </div>
 
               <div className="relative">
