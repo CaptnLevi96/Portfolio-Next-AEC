@@ -212,7 +212,23 @@ export default function Home() {
                 À propos
               </a>
             </li>
-            <li><a href="#projects" className="hover:text-[#40c057] transition-colors">Projets</a></li>
+
+            <li>
+              <a 
+                href="#projects" 
+                className="hover:text-[#40c057] transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const projectsSection = document.getElementById('projects');
+                  if (projectsSection) {
+                    projectsSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Projets
+              </a>
+            </li>
+            
             <li><a href="#contact" className="hover:text-[#40c057] transition-colors">Contact</a></li>
           </ul>
         </nav>
@@ -662,7 +678,7 @@ export default function Home() {
 </section>
 
 {/* Section Projets */}
-<section className="min-h-screen bg-[#E6FFE6] py-20">
+<section id="projects" className="min-h-screen bg-[#E6FFE6] py-20">
   <div className="max-w-7xl mx-auto px-8">
     <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#1a472a] to-[#40c057] text-transparent bg-clip-text animate-gradient">
       Mes projets
