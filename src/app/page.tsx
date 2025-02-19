@@ -5,6 +5,15 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Définition des types
+type Project = {
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  tags: string[];
+};
+
 export default function Home() {
   const titles = ["Infographe", "Développeur web", "Designer web"];
   const [titleIndex, setTitleIndex] = useState(0);
@@ -19,7 +28,60 @@ export default function Home() {
     home: false,
     about: false
   });
+  
+  // État pour le filtre actif
+  const [activeFilter, setActiveFilter] = useState<string>('Programmation');
 
+  // Données des projets
+  const projects: Project[] = [
+    {
+      title: "Portfolio Personnel",
+      description: "Site web personnel créé avec Next.js et TailwindCSS, présentant une interface moderne et responsive avec des animations fluides.",
+      image: "/portfolio.jpg",
+      category: "Programmation",
+      tags: ["React", "Next.js", "TailwindCSS", "TypeScript"]
+    },
+    {
+      title: "E-commerce Dashboard",
+      description: "Tableau de bord administratif pour une plateforme e-commerce, incluant des graphiques en temps réel et une gestion complète des produits.",
+      image: "/dashboard.jpg",
+      category: "Programmation",
+      tags: ["React", "Node.js", "MongoDB", "Chart.js"]
+    },
+    {
+      title: "E-commerce Dashboard",
+      description: "Tableau de bord administratif pour une plateforme e-commerce, incluant des graphiques en temps réel et une gestion complète des produits.",
+      image: "/dashboard.jpg",
+      category: "Programmation",
+      tags: ["React", "Node.js", "MongoDB", "Chart.js"]
+    },
+    {
+      title: "E-commerce Dashboard",
+      description: "Tableau de bord administratif pour une plateforme e-commerce, incluant des graphiques en temps réel et une gestion complète des produits.",
+      image: "/dashboard.jpg",
+      category: "Programmation",
+      tags: ["React", "Node.js", "MongoDB", "Chart.js"]
+    },
+    {
+      title: "E-commerce Dashboard",
+      description: "Tableau de bord administratif pour une plateforme e-commerce, incluant des graphiques en temps réel et une gestion complète des produits.",
+      image: "/dashboard.jpg",
+      category: "Programmation",
+      tags: ["React", "Node.js", "MongoDB", "Chart.js"]
+    },
+    {
+      title: "E-commerce Dashboard",
+      description: "Tableau de bord administratif pour une plateforme e-commerce, incluant des graphiques en temps réel et une gestion complète des produits.",
+      image: "/dashboard.jpg",
+      category: "Programmation",
+      tags: ["React", "Node.js", "MongoDB", "Chart.js"]
+    }
+   
+  ];
+
+
+  // Reste du code...
+  
   // Gestion de la séquence de chargement initiale
   useEffect(() => {
     setTimeout(() => {
@@ -39,7 +101,6 @@ export default function Home() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      // Gestion de la visibilité de la navbar
       if (currentScrollY < lastScrollY) {
         setIsNavVisible(true);
       } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
@@ -47,7 +108,6 @@ export default function Home() {
       }
       setLastScrollY(currentScrollY);
 
-      // Révélation des sections au scroll
       const aboutSection = document.getElementById('about');
       if (aboutSection) {
         const aboutTop = aboutSection.getBoundingClientRect().top;
@@ -598,9 +658,88 @@ export default function Home() {
       </div>
     </div>
   </div>
+  
 </section>
-        
+
+{/* Section Projets */}
+<section className="min-h-screen bg-[#E6FFE6] py-20">
+  <div className="max-w-7xl mx-auto px-8">
+    <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#1a472a] to-[#40c057] text-transparent bg-clip-text animate-gradient">
+      Mes projets
+    </h2>
+    <p className="text-[#1a472a] text-center text-xl max-w-3xl mx-auto mb-16">
+      Découvrez une sélection de mes réalisations qui illustrent mon expertise en développement web et en design. Chaque projet représente un défi unique relevé avec créativité et rigueur technique.
+    </p>
+
+    {/* Filtres */}
+    <div className="flex justify-center gap-4 mb-12">
+      {['Programmation', 'Design graphique / UI-UX'].map((filter) => (
+        <button
+          key={filter}
+          onClick={() => setActiveFilter(filter)}
+          className={`px-6 py-3 rounded-full transition-all duration-300 ${
+            activeFilter === filter
+              ? 'bg-[#40c057] text-white shadow-lg'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+        >
+          {filter}
+        </button>
+      ))}
+    </div>
+
+    {/* Grille de projets */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projects
+        .filter((project) => project.category === activeFilter)
+        .map((project, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+          >
+            {/* Image du projet */}
+            <div className="h-48 bg-gray-300 relative group">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-[#40c057]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <button className="bg-white text-[#40c057] px-6 py-2 rounded-full font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  Voir le projet
+                </button>
+              </div>
+            </div>
+
+            {/* Contenu du projet */}
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-[#1a472a] mb-2">
+                {project.title}
+              </h3>
+              <p className="text-gray-600 mb-4">
+                {project.description}
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="text-sm px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+    </div>
+  </div>
+</section>
       </div>
     </div>
+    
   );
 }
