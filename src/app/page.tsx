@@ -35,25 +35,25 @@ export default function Home() {
   // Données des projets
   const projects: Project[] = [
     {
-      title: "Portfolio Personnel",
-      description: "Site web personnel créé avec Next.js et TailwindCSS, présentant une interface moderne et responsive avec des animations fluides.",
-      image: "/portfolio.jpg",
+      title: "Site web d'une Pépinière",
+      description: "Site d'une pépiniere avec un panier une barre recherche filtre et catégories",
+      image: "/pepiniere.png",
       category: "Programmation",
-      tags: ["React", "Next.js", "TailwindCSS", "TypeScript"]
+      tags: ["HTML", "CSS", "JavaScript"]
     },
     {
-      title: "E-commerce Dashboard",
-      description: "Tableau de bord administratif pour une plateforme e-commerce, incluant des graphiques en temps réel et une gestion complète des produits.",
-      image: "/dashboard.jpg",
+      title: "Jeux avec tableau de score",
+      description: "Jeux qui consiste a rammaser une clé, éviter les ennemies et attendre la porte",
+      image: "/jeux.png",
       category: "Programmation",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js"]
+      tags: ["HTML", "CSS", "JavaScript", "NodeJS"]
     },
     {
-      title: "E-commerce Dashboard",
-      description: "Tableau de bord administratif pour une plateforme e-commerce, incluant des graphiques en temps réel et une gestion complète des produits.",
-      image: "/dashboard.jpg",
+      title: "Liste à faire",
+      description: "Liste à faire dévéloppé avec Inteliji IDEA à l'aide de la librairie REACT.",
+      image: "/list.png",
       category: "Programmation",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js"]
+      tags: ["React", "CSS", "IntelliJ IDEA"]
     },
     {
       title: "E-commerce Dashboard",
