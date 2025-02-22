@@ -56,18 +56,18 @@ export default function Home() {
       tags: ["React", "CSS", "IntelliJ IDEA"]
     },
     {
-      title: "E-commerce Dashboard",
-      description: "Tableau de bord administratif pour une plateforme e-commerce, incluant des graphiques en temps réel et une gestion complète des produits.",
-      image: "/dashboard.jpg",
+      title: "Quizz sur la géographie",
+      description: "Un quiz interactif en HTML, CSS et JavaScript avec questions aléatoires. 🚀",
+      image: "/quiz.png",
       category: "Programmation",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js"]
+      tags: ["HTML", "CSS", "JavaScript"]
     },
     {
-      title: "E-commerce Dashboard",
-      description: "Tableau de bord administratif pour une plateforme e-commerce, incluant des graphiques en temps réel et une gestion complète des produits.",
-      image: "/dashboard.jpg",
+      title: "Librarie La Ravelle",
+      description: "Site web transactionnel d'une bibliothèque produite avec la librairie Laravel",
+      image: "/laravelle.png",
       category: "Programmation",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js"]
+      tags: ["MySQL", "PHP", "Tailwind", "JavaScript"]
     },
     {
       title: "E-commerce Dashboard",
