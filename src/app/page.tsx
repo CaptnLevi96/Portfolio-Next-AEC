@@ -729,7 +729,7 @@ export default function Home() {
       image: "/list.png",
       category: "Programmation",
       tags: ["React", "CSS", "IntelliJ IDEA"],
-      url: "https://example.com/liste" 
+      url: "https://github.com/CaptnLevi96/liste-de-tache" 
     },
     {
       title: "Quizz sur la géographie",
