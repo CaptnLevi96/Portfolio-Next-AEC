@@ -70,11 +70,11 @@ export default function Home() {
       tags: ["MySQL", "PHP", "Tailwind", "JavaScript"]
     },
     {
-      title: "E-commerce Dashboard",
-      description: "Tableau de bord administratif pour une plateforme e-commerce, incluant des graphiques en temps réel et une gestion complète des produits.",
-      image: "/dashboard.jpg",
+      title: "Générateur de mot de passe",
+      description: "Application servant à créer des mots de passe sécurisés et aléatoires en un clic pour renforcer ta protection en ligne",
+      image: "/motdepasse.png",
       category: "Programmation",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js"]
+      tags: ["HTML", "CSS", "JavaScript"] 
     }
    
   ];
