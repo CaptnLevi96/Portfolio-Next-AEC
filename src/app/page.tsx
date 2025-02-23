@@ -704,54 +704,105 @@ export default function Home() {
       ))}
     </div>
 
-    {/* Grille de projets */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {projects
-        .filter((project) => project.category === activeFilter)
-        .map((project, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
-          >
-            {/* Image du projet */}
-            <div className="h-48 bg-gray-300 relative group">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-[#40c057]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <button className="bg-white text-[#40c057] px-6 py-2 rounded-full font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  Voir le projet
-                </button>
-              </div>
-            </div>
-
-            {/* Contenu du projet */}
-            <div className="p-6">
-              <h3 className="text-xl font-bold text-[#1a472a] mb-2">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {project.description}
-              </p>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag, idx) => (
-                  <span
-                    key={idx}
-                    className="text-sm px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
+{/* Grille de projets */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {[
+    {
+      title: "Site web d'une Pépinière",
+      description: "Site d'une pépiniere avec un panier une barre recherche filtre et catégories",
+      image: "/pepiniere.png",
+      category: "Programmation",
+      tags: ["HTML", "CSS", "JavaScript"],
+      url: "https://captnlevi96.github.io/Projet-pepiniere/Index.html"
+    },
+    {
+      title: "Jeux avec tableau de score",
+      description: "Jeux qui consiste a rammaser une clé, éviter les ennemies et attendre la porte",
+      image: "/jeux.png",
+      category: "Programmation",
+      tags: ["HTML", "CSS", "JavaScript", "NodeJS"],
+      url: "https://github.com/CaptnLevi96/Projet-Jeux-La-Porte"
+    },
+    {
+      title: "Liste à faire",
+      description: "Liste à faire dévéloppé avec Inteliji IDEA à l'aide de la librairie REACT.",
+      image: "/list.png",
+      category: "Programmation",
+      tags: ["React", "CSS", "IntelliJ IDEA"],
+      url: "https://example.com/liste" 
+    },
+    {
+      title: "Quizz sur la géographie",
+      description: "Un quiz interactif en HTML, CSS et JavaScript avec questions aléatoires. 🚀",
+      image: "/quiz.png",
+      category: "Programmation",
+      tags: ["HTML", "CSS", "JavaScript"],
+      url: "https://captnlevi96.github.io/Quiz-geographie/" 
+    },
+    {
+      title: "Librarie La Ravelle",
+      description: "Site web transactionnel d'une bibliothèque produite avec la librairie Laravel",
+      image: "/laravelle.png",
+      category: "Programmation",
+      tags: ["MySQL", "PHP", "Tailwind", "JavaScript"],
+      url: "https://github.com/CaptnLevi96/ProjetLaravel1" 
+    },
+    {
+      title: "Générateur de mot de passe",
+      description: "Application servant à créer des mots de passe sécurisés et aléatoires en un clic pour renforcer ta protection en ligne",
+      image: "/motdepasse.png",
+      category: "Programmation",
+      tags: ["HTML", "CSS", "JavaScript"],
+      url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
+    }
+  ].filter((project) => project.category === activeFilter)
+    .map((project, index) => (
+      <div
+        key={index}
+        className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+      >
+        {/* Image du projet */}
+        <div className="h-48 bg-gray-300 relative group">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-[#40c057]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <button 
+              onClick={() => window.open(project.url, '_blank')} 
+              className="bg-white text-[#40c057] px-6 py-2 rounded-full font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+            >
+              Voir le projet
+            </button>
           </div>
-        ))}
-    </div>
+        </div>
+
+        {/* Contenu du projet */}
+        <div className="p-6">
+          <h3 className="text-xl font-bold text-[#1a472a] mb-2">
+            {project.title}
+          </h3>
+          <p className="text-gray-600 mb-4">
+            {project.description}
+          </p>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2">
+            {project.tags.map((tag, idx) => (
+              <span
+                key={idx}
+                className="text-sm px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))}
+</div>
   </div>
 </section>
       </div>
