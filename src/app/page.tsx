@@ -688,7 +688,7 @@ export default function Home() {
     </p>
 
     {/* Filtres */}
-    <div className="flex justify-center gap-4 mb-12">
+    <div className="flex justify-center gap-4 mb-12 font-bold">
       {['Programmation', 'Design graphique / UI-UX'].map((filter) => (
         <button
           key={filter}
