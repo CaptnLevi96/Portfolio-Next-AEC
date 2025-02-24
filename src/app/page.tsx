@@ -764,12 +764,12 @@ export default function Home() {
       url: "https://www.behance.net/gallery/202984359/Native-Motherland" 
     },
     {
-      title: "BlaBlaBla",
-      description: "BlaBlaBla",
-      image: "/motdepasse.png",
+      title: "Recolte",
+      description: "Moodboard et maquette finale de d'un site web d'une épicerie biologique",
+      image: "/recolte.png",
       category: "Design graphique / UI-UX",
-      tags: ["HTML", "CSS", "JavaScript"],
-      url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
+      tags: ["Figma"],
+      url: "https://www.behance.net/gallery/201731649/Maquette-pour-Epicerie-biologique-Recette" 
     },
 
     {
