@@ -814,8 +814,8 @@ export default function Home() {
     .map((project, index) => (
       <div
         key={index}
-        className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
-      >
+        className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full"
+        >
         {/* Image du projet */}
         <div className="h-48 bg-gray-300 relative group">
           <Image
@@ -835,16 +835,17 @@ export default function Home() {
         </div>
 
         {/* Contenu du projet */}
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-grow">
+
           <h3 className="text-xl font-bold text-[#1a472a] mb-2">
             {project.title}
           </h3>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-600 mb-4 flex-grow">
             {project.description}
           </p>
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mt-auto">
             {project.tags.map((tag, idx) => (
               <span
                 key={idx}
