@@ -627,7 +627,7 @@ export default function Home() {
           <div className="space-y-4">
             {[
               { name: "Office 365", level: 85 },
-              { name: "Wordpress", level: 75 },
+              { name: "Wordpress", level: 85 },
               { name: "Git", level: 70 },
               { name: "SEO", level: 65 },
               { name: "UI/UX Design", level: 80 }
@@ -754,7 +754,62 @@ export default function Home() {
       category: "Programmation",
       tags: ["HTML", "CSS", "JavaScript"],
       url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
+    },
+    {
+      title: "The Motherland",
+      description: "Une illustration célébrant l’Afrique, son identité et sa culture. Fusion de symboles, couleurs panafricaines et éléments graphiques pour un hommage vibrant au continent. 🌍🎨",
+      image: "/africa.png",
+      category: "Design graphique / UI-UX",
+      tags: ["Figma", "Adobe Illustrator"],
+      url: "https://www.behance.net/gallery/202984359/Native-Motherland" 
+    },
+    {
+      title: "BlaBlaBla",
+      description: "BlaBlaBla",
+      image: "/motdepasse.png",
+      category: "Design graphique / UI-UX",
+      tags: ["HTML", "CSS", "JavaScript"],
+      url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
+    },
+
+    {
+      title: "BlaBlaBla",
+      description: "BlaBlaBla",
+      image: "/motdepasse.png",
+      category: "Design graphique / UI-UX",
+      tags: ["HTML", "CSS", "JavaScript"],
+      url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
+    },
+
+    {
+      title: "BlaBlaBla",
+      description: "BlaBlaBla",
+      image: "/motdepasse.png",
+      category: "Design graphique / UI-UX",
+      tags: ["HTML", "CSS", "JavaScript"],
+      url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
+    },
+
+    {
+      title: "BlaBlaBla",
+      description: "BlaBlaBla",
+      image: "/motdepasse.png",
+      category: "Design graphique / UI-UX",
+      tags: ["HTML", "CSS", "JavaScript"],
+      url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
+    },
+
+    {
+      title: "BlaBlaBla",
+      description: "BlaBlaBla",
+      image: "/motdepasse.png",
+      category: "Design graphique / UI-UX",
+      tags: ["HTML", "CSS", "JavaScript"],
+      url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
     }
+
+
+
   ].filter((project) => project.category === activeFilter)
     .map((project, index) => (
       <div
