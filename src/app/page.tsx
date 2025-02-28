@@ -709,7 +709,7 @@ export default function Home() {
   {[
     {
       title: "Site web d'une Pépinière",
-      description: "Site d'une pépiniere avec un panier une barre recherche filtre et catégories",
+      description: "Site d'une pépiniere avec un panier une barre recherche filtre et catégories.",
       image: "/pepiniere.png",
       category: "Programmation",
       tags: ["HTML", "CSS", "JavaScript"],
@@ -717,7 +717,7 @@ export default function Home() {
     },
     {
       title: "Jeux avec tableau de score",
-      description: "Jeux qui consiste a rammaser une clé, éviter les ennemies et attendre la porte",
+      description: "Jeux qui consiste a rammaser une clé, éviter les ennemies et attendre la porte.",
       image: "/jeux.png",
       category: "Programmation",
       tags: ["HTML", "CSS", "JavaScript", "Node.js"],
@@ -725,7 +725,7 @@ export default function Home() {
     },
     {
       title: "Liste à faire",
-      description: "Liste à faire dévéloppé avec Inteliji IDEA à l'aide de la librairie REACT",
+      description: "Liste à faire dévéloppé avec Inteliji IDEA à l'aide de la librairie REACT.",
       image: "/list.png",
       category: "Programmation",
       tags: ["React", "CSS", "IntelliJ IDEA"],
@@ -733,7 +733,7 @@ export default function Home() {
     },
     {
       title: "Quizz sur la géographie",
-      description: "Un quiz interactif en HTML, CSS et JavaScript avec questions aléatoires 🚀",
+      description: "Un quiz interactif en HTML, CSS et JavaScript avec questions aléatoires. 🚀",
       image: "/quiz.png",
       category: "Programmation",
       tags: ["HTML", "CSS", "JavaScript"],
@@ -741,7 +741,7 @@ export default function Home() {
     },
     {
       title: "Librarie La Ravelle",
-      description: "Site web transactionnel d'une bibliothèque produite avec la librairie Laravel",
+      description: "Site web transactionnel d'une bibliothèque produite avec la librairie Laravel.",
       image: "/laravelle.png",
       category: "Programmation",
       tags: ["MySQL", "PHP", "Tailwind", "JavaScript", "MySQL"],
@@ -749,7 +749,7 @@ export default function Home() {
     },
     {
       title: "Benactor",
-      description: "Développement d'une application web moderne permettant la coordination entre organisations et bénévoles",
+      description: "Développement d'une application web moderne permettant la coordination entre organisations et bénévoles.",
       image: "/benactor.png",
       category: "Programmation",
       tags: ["Next.js", "Drizzle", "Hono","PostgresQL"],
@@ -765,7 +765,7 @@ export default function Home() {
     },
     {
       title: "Recolte",
-      description: "Moodboard et maquette finale de d'un site web d'une épicerie biologique",
+      description: "Moodboard et maquette finale de d'un site web d'une épicerie biologique.",
       image: "/recolte.png",
       category: "Design graphique / UI-UX",
       tags: ["Figma"],
@@ -773,21 +773,21 @@ export default function Home() {
     },
     {
       title: "Je t'aime",
-      description: "Fresque multilingue d'une mosaïque conçue avec la phrase j'aime pour la salle de réception La Sirène à Laval",
+      description: "Fresque multilingue d'une mosaïque conçue avec la phrase j'aime pour la salle de réception La Sirène à Laval.",
       image: "/sirene.png",
       category: "Design graphique / UI-UX",
-      tags: ["HTML", "CSS", "JavaScript"],
+      tags: ["Adobe Illustrator"],
       url: "https://www.behance.net/gallery/183773141/I-love-you-Mozaic"
     },
     
 
     {
-      title: "BlaBlaBla",
-      description: "BlaBlaBla",
-      image: "/motdepasse.png",
+      title: "Buqs",
+      description: "Conception UI/UX de Buqs, une application de livres numériques offrant une navigation intuitive, une interface moderne et des options de lecture personnalisables.",
+      image: "/buqs.png",
       category: "Design graphique / UI-UX",
-      tags: ["HTML", "CSS", "JavaScript"],
-      url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
+      tags: ["Figma"],
+      url: "https://www.behance.net/gallery/195433225/UIUX-design-for-a-e-book-application-named-Buqs" 
     },
 
     {
