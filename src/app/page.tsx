@@ -720,12 +720,12 @@ export default function Home() {
       description: "Jeux qui consiste a rammaser une clé, éviter les ennemies et attendre la porte",
       image: "/jeux.png",
       category: "Programmation",
-      tags: ["HTML", "CSS", "JavaScript", "NodeJS"],
+      tags: ["HTML", "CSS", "JavaScript", "Node.js"],
       url: "https://github.com/CaptnLevi96/Projet-Jeux-La-Porte"
     },
     {
       title: "Liste à faire",
-      description: "Liste à faire dévéloppé avec Inteliji IDEA à l'aide de la librairie REACT.",
+      description: "Liste à faire dévéloppé avec Inteliji IDEA à l'aide de la librairie REACT",
       image: "/list.png",
       category: "Programmation",
       tags: ["React", "CSS", "IntelliJ IDEA"],
@@ -733,7 +733,7 @@ export default function Home() {
     },
     {
       title: "Quizz sur la géographie",
-      description: "Un quiz interactif en HTML, CSS et JavaScript avec questions aléatoires. 🚀",
+      description: "Un quiz interactif en HTML, CSS et JavaScript avec questions aléatoires 🚀",
       image: "/quiz.png",
       category: "Programmation",
       tags: ["HTML", "CSS", "JavaScript"],
@@ -744,16 +744,16 @@ export default function Home() {
       description: "Site web transactionnel d'une bibliothèque produite avec la librairie Laravel",
       image: "/laravelle.png",
       category: "Programmation",
-      tags: ["MySQL", "PHP", "Tailwind", "JavaScript"],
+      tags: ["MySQL", "PHP", "Tailwind", "JavaScript", "MySQL"],
       url: "https://github.com/CaptnLevi96/ProjetLaravel1" 
     },
     {
-      title: "Générateur de mot de passe",
-      description: "Application servant à créer des mots de passe sécurisés et aléatoires en un clic pour renforcer ta protection en ligne",
-      image: "/motdepasse.png",
+      title: "Benactor",
+      description: "Développement d'une application web moderne permettant la coordination entre organisations et bénévoles",
+      image: "/benactor.png",
       category: "Programmation",
-      tags: ["HTML", "CSS", "JavaScript"],
-      url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
+      tags: ["Next.js", "Drizzle", "Hono","PostgresQL"],
+      url: "https://www.benactor.com/" 
     },
     {
       title: "The Motherland",
@@ -771,15 +771,15 @@ export default function Home() {
       tags: ["Figma"],
       url: "https://www.behance.net/gallery/201731649/Maquette-pour-Epicerie-biologique-Recette" 
     },
-
     {
-      title: "BlaBlaBla",
-      description: "BlaBlaBla",
-      image: "/motdepasse.png",
+      title: "Je t'aime",
+      description: "Fresque multilingue d'une mosaïque conçue avec la phrase j'aime pour la salle de réception La Sirène à Laval",
+      image: "/sirene.png",
       category: "Design graphique / UI-UX",
       tags: ["HTML", "CSS", "JavaScript"],
-      url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
+      url: "https://www.behance.net/gallery/183773141/I-love-you-Mozaic"
     },
+    
 
     {
       title: "BlaBlaBla",
