@@ -791,12 +791,12 @@ export default function Home() {
     },
 
     {
-      title: "BlaBlaBla",
-      description: "BlaBlaBla",
-      image: "/motdepasse.png",
+      title: "Poster Art tridimensionnelle",
+      description: "Une illustration dynamique mettant en avant l’art 3D, avec une typographie métallisée, des formes flottantes et un fond cosmique vibrant.",
+      image: "/3D.png",
       category: "Design graphique / UI-UX",
-      tags: ["HTML", "CSS", "JavaScript"],
-      url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
+      tags: ["Adobe Illustrator", "Adobe Photoshop"],
+      url: "https://www.behance.net/gallery/203123971/3D-Art-Poster" 
     },
 
     {
