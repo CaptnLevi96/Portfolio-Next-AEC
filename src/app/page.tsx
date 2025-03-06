@@ -800,12 +800,12 @@ export default function Home() {
     },
 
     {
-      title: "BlaBlaBla",
-      description: "BlaBlaBla",
-      image: "/motdepasse.png",
+      title: "Ancien portfolio mobile",
+      description: "La maquette moodboard Figma de mon ancien portfolio de développeur web, que j'avais conçue avant en utilisant HTML, CSS et JavaScript.",
+      image: "/portfolio.png",
       category: "Design graphique / UI-UX",
-      tags: ["HTML", "CSS", "JavaScript"],
-      url: "https://captnlevi96.github.io/Generateur-de-mot-de-passe/" 
+      tags: ["Figma",  "Adobe Photoshop"],
+      url: "https://www.behance.net/gallery/220772947/Mobile-portfolio-template" 
     }
 
 
