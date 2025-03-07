@@ -271,11 +271,15 @@ export default function Home() {
                   <span className="relative z-10">Me Contacter</span>
                   <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
                 </button>
-                
-                <button className="group border-2 border-[#40c057] text-[#1a472a] px-10 py-4 rounded-full hover:bg-[#40c057] hover:text-white transition-all hover:shadow-lg relative overflow-hidden">
-                  <span className="relative z-10">Mon CV</span>
-                  <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#40c057] to-[#69db7c] transition-all duration-300 group-hover:w-full -z-10"></div>
-                </button>
+                <a 
+  href="/LeviLosekeCV.pdf" 
+  download
+                className="group border-2 border-[#40c057] text-[#1a472a] px-10 py-4 rounded-full hover:bg-[#40c057] hover:text-white transition-all hover:shadow-lg relative overflow-hidden inline-flex items-center justify-center"
+              >
+                <span className="relative z-10">Télécharger mon CV</span>
+                <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#40c057] to-[#69db7c] transition-all duration-300 group-hover:w-full -z-10"></div>
+              </a>
+
               </div>
               </div>
 
