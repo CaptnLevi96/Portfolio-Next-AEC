@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 // Définition des types
 type Project = {
@@ -79,7 +81,12 @@ export default function Home() {
    
   ];
 
+  const formRef = useRef<HTMLFormElement>(null);
+  
 
+  useEffect(() => {
+    emailjs.init("votre_clé_publique_ici");
+  }, []);
   // Reste du code...
   
   // Gestion de la séquence de chargement initiale
@@ -881,72 +888,85 @@ export default function Home() {
       <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
         <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Envoyez-moi un message</h3>
         
-        <form className="space-y-6" onSubmit={(e) => {
-          e.preventDefault();
-          // Ici, vous implémenteriez la logique d'envoi du formulaire
-          // Pour l'instant, simulons juste une alerte de succès
-          alert("Message envoyé avec succès !");
-          // Réinitialiser le formulaire
-          (e.target as HTMLFormElement).reset();
-        }}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label htmlFor="name" className="block text-[#1a472a] font-medium mb-2">Nom</label>
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                required 
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all"
-                placeholder="Votre nom"
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="email" className="block text-[#1a472a] font-medium mb-2">Email</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                required 
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all"
-                placeholder="votre@email.com"
-              />
-            </div>
-          </div>
-          
-          <div>
-            <label htmlFor="subject" className="block text-[#1a472a] font-medium mb-2">Sujet</label>
-            <input 
-              type="text" 
-              id="subject" 
-              name="subject" 
-              required 
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all"
-              placeholder="Sujet de votre message"
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="message" className="block text-[#1a472a] font-medium mb-2">Message</label>
-            <textarea 
-              id="message" 
-              name="message" 
-              rows={5} 
-              required 
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all resize-none"
-              placeholder="Votre message..."
-            ></textarea>
-          </div>
-          
-          <button 
-            type="submit" 
-            className="group bg-[#40c057] text-white px-8 py-3 rounded-full hover:bg-[#2b8a3e] transition-all duration-300 hover:shadow-lg relative overflow-hidden"
-          >
-            <span className="relative z-10">Envoyer le message</span>
-            <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
-          </button>
-        </form>
+        <form 
+  ref={formRef}
+  className="space-y-6" 
+  onSubmit={(e) => {
+    e.preventDefault();
+    
+    emailjs.sendForm(
+      'service_l7a0gq2',    // Votre ID de service
+      'template_c556s79',   // Votre ID de template
+      formRef.current!,
+      'i0XmF5NpB-1smVxNi'  // Remplacez par votre clé publique/User ID
+    )
+    .then(() => {
+      alert("Message envoyé avec succès !");
+      formRef.current?.reset();
+    }, (error) => {
+      console.error("Erreur:", error);
+      alert("Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.");
+    });
+  }}
+>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <label htmlFor="name" className="block text-[#1a472a] font-medium mb-2">Nom</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        required 
+        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all"
+        placeholder="Votre nom"
+      />
+    </div>
+    
+    <div>
+      <label htmlFor="email" className="block text-[#1a472a] font-medium mb-2">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required 
+        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all"
+        placeholder="votre@email.com"
+      />
+    </div>
+  </div>
+  
+  <div>
+    <label htmlFor="subject" className="block text-[#1a472a] font-medium mb-2">Sujet</label>
+    <input 
+      type="text" 
+      id="subject" 
+      name="subject" 
+      required 
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all"
+      placeholder="Sujet de votre message"
+    />
+  </div>
+  
+  <div>
+    <label htmlFor="message" className="block text-[#1a472a] font-medium mb-2">Message</label>
+    <textarea 
+      id="message" 
+      name="message" 
+      rows={5} 
+      required 
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all resize-none"
+      placeholder="Votre message..."
+    ></textarea>
+  </div>
+  
+  <button 
+    type="submit" 
+    className="group bg-[#40c057] text-white px-8 py-3 rounded-full hover:bg-[#2b8a3e] transition-all duration-300 hover:shadow-lg relative overflow-hidden"
+  >
+    <span className="relative z-10">Envoyer le message</span>
+    <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
+  </button>
+</form>
       </div>
       
       {/* Informations de contact et réseaux sociaux */}
