@@ -865,6 +865,253 @@ export default function Home() {
 </div>
   </div>
 </section>
+{/* Section Contact */}
+<section id="contact" className="min-h-screen bg-gradient-to-b from-[#E6FFE6] to-[#c8e6c9] py-20">
+  <div className="max-w-7xl mx-auto px-8">
+    <h2 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-[#1a472a] to-[#40c057] text-transparent bg-clip-text animate-gradient">
+      Me contacter
+    </h2>
+    
+    <p className="text-[#1a472a] text-center text-xl max-w-3xl mx-auto mb-16">
+      Vous avez un projet en tête ou vous souhaitez simplement échanger ? N'hésitez pas à me contacter, je serais ravi de discuter avec vous !
+    </p>
+    
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Formulaire de contact */}
+      <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+        <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Envoyez-moi un message</h3>
+        
+        <form className="space-y-6" onSubmit={(e) => {
+          e.preventDefault();
+          // Ici, vous implémenteriez la logique d'envoi du formulaire
+          // Pour l'instant, simulons juste une alerte de succès
+          alert("Message envoyé avec succès !");
+          // Réinitialiser le formulaire
+          (e.target as HTMLFormElement).reset();
+        }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="name" className="block text-[#1a472a] font-medium mb-2">Nom</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all"
+                placeholder="Votre nom"
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="email" className="block text-[#1a472a] font-medium mb-2">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all"
+                placeholder="votre@email.com"
+              />
+            </div>
+          </div>
+          
+          <div>
+            <label htmlFor="subject" className="block text-[#1a472a] font-medium mb-2">Sujet</label>
+            <input 
+              type="text" 
+              id="subject" 
+              name="subject" 
+              required 
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all"
+              placeholder="Sujet de votre message"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="message" className="block text-[#1a472a] font-medium mb-2">Message</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows={5} 
+              required 
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all resize-none"
+              placeholder="Votre message..."
+            ></textarea>
+          </div>
+          
+          <button 
+            type="submit" 
+            className="group bg-[#40c057] text-white px-8 py-3 rounded-full hover:bg-[#2b8a3e] transition-all duration-300 hover:shadow-lg relative overflow-hidden"
+          >
+            <span className="relative z-10">Envoyer le message</span>
+            <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
+          </button>
+        </form>
+      </div>
+      
+      {/* Informations de contact et réseaux sociaux */}
+      <div className="space-y-8">
+        <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+          <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Mes coordonnées</h3>
+          
+          <div className="space-y-4">
+            <div className="flex items-center space-x-4">
+              <div className="bg-[#40c057]/10 p-3 rounded-full">
+                <svg className="w-6 h-6 text-[#40c057]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <p className="text-gray-500">Email</p>
+                <a href="mailto:Levilo97@outlook.com" className="text-[#1a472a] hover:text-[#40c057] transition-colors">Levilo97@outlook.com</a>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <div className="bg-[#40c057]/10 p-3 rounded-full">
+                <svg className="w-6 h-6 text-[#40c057]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <div>
+                <p className="text-gray-500">Téléphone</p>
+                <a href="tel:+1234567890" className="text-[#1a472a] hover:text-[#40c057] transition-colors">(438)-233-3595</a>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <div className="bg-[#40c057]/10 p-3 rounded-full">
+                <svg className="w-6 h-6 text-[#40c057]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <p className="text-gray-500">Localisation</p>
+                <p className="text-[#1a472a]">Laval, Québec, Canada</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Réseaux sociaux */}
+        <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+          <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Suivez-moi</h3>
+          
+          <div className="flex space-x-4">
+            {/* LinkedIn */}
+            <a 
+              href="https://www.linkedin.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-[#40c057]/10 p-3 rounded-full hover:bg-[#40c057] hover:text-white transition-all duration-300 transform hover:scale-110"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+              </svg>
+            </a>
+            
+            {/* GitHub */}
+            <a 
+              href="https://github.com/CaptnLevi96" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-[#40c057]/10 p-3 rounded-full hover:bg-[#40c057] hover:text-white transition-all duration-300 transform hover:scale-110"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+              </svg>
+            </a>
+            
+            {/* Behance */}
+            <a 
+              href="https://www.behance.net/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-[#40c057]/10 p-3 rounded-full hover:bg-[#40c057] hover:text-white transition-all duration-300 transform hover:scale-110"
+            >
+      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.803 5.296c.588 0 1.12.034 1.596.103.477.069.885.196 1.225.382.34.187.602.436.79.75.186.311.28.705.28 1.175 0 .525-.132.986-.396 1.386-.262.4-.66.735-1.193 1.006.723.221 1.262.592 1.619 1.113.354.522.533 1.155.533 1.9 0 .522-.101.986-.303 1.393-.202.407-.476.747-.825 1.02-.349.268-.758.472-1.227.609-.47.134-.977.202-1.524.202H3.204V5.296h4.599zm-.25 3.809c.487 0 .89-.103 1.214-.308.322-.205.484-.56.484-1.064 0-.27-.054-.496-.16-.675-.109-.179-.258-.32-.445-.423-.187-.103-.407-.173-.658-.211-.254-.042-.525-.064-.814-.064H5.617v2.745h1.936zm.126 4.029c.317 0 .607-.03.872-.09a1.83 1.83 0 0 0 .66-.277c.182-.128.323-.3.427-.519.103-.218.154-.492.154-.819 0-.656-.184-1.126-.553-1.409-.369-.283-.866-.425-1.494-.425H5.617v3.54h2.062zM16.842 14.882c.327.347.81.52 1.448.52.451 0 .843-.112 1.173-.333.329-.224.533-.463.607-.718h2.005c-.321 1-.81 1.714-1.465 2.144-.656.43-1.447.645-2.372.645-.643 0-1.223-.103-1.738-.308a3.76 3.76 0 0 1-1.332-.882 3.925 3.925 0 0 1-.852-1.378c-.2-.536-.301-1.13-.301-1.782 0-.627.108-1.202.326-1.726.218-.523.52-.973.912-1.347.389-.375.853-.669 1.385-.88.535-.212 1.119-.318 1.752-.318.713 0 1.345.136 1.897.406.551.271 1.008.633 1.371 1.085.362.452.63.97.801 1.552.17.581.219 1.196.149 1.844H16.33c0 .633.165 1.137.491 1.484v.002zm2.882-4.945c-.291-.322-.783-.496-1.385-.496-.391 0-.715.065-.968.2-.254.134-.457.3-.61.499-.154.2-.261.412-.32.642-.058.226-.093.43-.101.608h3.965c-.057-.624-.29-1.13-.581-1.453zm-8.72 6.228V5.086h2.468v11.079h-2.468zM0 0h24v24H0z"/>
+      </svg>
+            </a>
+            
+            {/* Twitter/X */}
+            <a 
+              href="https://twitter.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-[#40c057]/10 p-3 rounded-full hover:bg-[#40c057] hover:text-white transition-all duration-300 transform hover:scale-110"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Footer */}
+<footer className="bg-[#1a472a] text-white py-8">
+  <div className="max-w-7xl mx-auto px-8">
+    <div className="flex flex-col md:flex-row justify-between items-center">
+      <div className="mb-4 md:mb-0">
+        <h3 className="text-xl font-bold">[LEVI LOSEKE]</h3>
+        <p className="text-gray-300 mt-2">Développeur web & Designer</p>
+      </div>
+      
+      <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+        <a href="#home" className="hover:text-[#40c057] transition-colors">Accueil</a>
+        <a href="#about" className="hover:text-[#40c057] transition-colors">À propos</a>
+        <a href="#projects" className="hover:text-[#40c057] transition-colors">Projets</a>
+        <a href="#contact" className="hover:text-[#40c057] transition-colors">Contact</a>
+      </div>
+    </div>
+    
+    <div className="border-t border-gray-700 mt-6 pt-6 flex flex-col md:flex-row justify-between items-center">
+      <p className="text-gray-400 text-sm mb-4 md:mb-0">
+        © {new Date().getFullYear()} Levi Loseke. Tous droits réservés.
+      </p>
+      
+      <div className="flex space-x-4">
+        <a 
+          href="https://www.linkedin.com/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-[#40c057] transition-colors"
+        >
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+          </svg>
+        </a>
+        
+        <a 
+          href="https://github.com/CaptnLevi96" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-[#40c057] transition-colors"
+        >
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+        
+        <a 
+          href="https://www.behance.net/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-[#40c057] transition-colors"
+        >
+          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.803 5.296c.588 0 1.12.034 1.596.103.477.069.885.196 1.225.382.34.187.602.436.79.75.186.311.28.705.28 1.175 0 .525-.132.986-.396 1.386-.262.4-.66.735-1.193 1.006.723.221 1.262.592 1.619 1.113.354.522.533 1.155.533 1.9 0 .522-.101.986-.303 1.393-.202.407-.476.747-.825 1.02-.349.268-.758.472-1.227.609-.47.134-.977.202-1.524.202H3.204V5.296h4.599zm-.25 3.809c.487 0 .89-.103 1.214-.308.322-.205.484-.56.484-1.064 0-.27-.054-.496-.16-.675-.109-.179-.258-.32-.445-.423-.187-.103-.407-.173-.658-.211-.254-.042-.525-.064-.814-.064H5.617v2.745h1.936zm.126 4.029c.317 0 .607-.03.872-.09a1.83 1.83 0 0 0 .66-.277c.182-.128.323-.3.427-.519.103-.218.154-.492.154-.819 0-.656-.184-1.126-.553-1.409-.369-.283-.866-.425-1.494-.425H5.617v3.54h2.062zM16.842 14.882c.327.347.81.52 1.448.52.451 0 .843-.112 1.173-.333.329-.224.533-.463.607-.718h2.005c-.321 1-.81 1.714-1.465 2.144-.656.43-1.447.645-2.372.645-.643 0-1.223-.103-1.738-.308a3.76 3.76 0 0 1-1.332-.882 3.925 3.925 0 0 1-.852-1.378c-.2-.536-.301-1.13-.301-1.782 0-.627.108-1.202.326-1.726.218-.523.52-.973.912-1.347.389-.375.853-.669 1.385-.88.535-.212 1.119-.318 1.752-.318.713 0 1.345.136 1.897.406.551.271 1.008.633 1.371 1.085.362.452.63.97.801 1.552.17.581.219 1.196.149 1.844H16.33c0 .633.165 1.137.491 1.484v.002zm2.882-4.945c-.291-.322-.783-.496-1.385-.496-.391 0-.715.065-.968.2-.254.134-.457.3-.61.499-.154.2-.261.412-.32.642-.058.226-.093.43-.101.608h3.965c-.057-.624-.29-1.13-.581-1.453zm-8.72 6.228V5.086h2.468v11.079h-2.468zM0 0h24v24H0z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
       </div>
     </div>
     
