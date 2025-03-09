@@ -1059,7 +1059,7 @@ export default function Home() {
     <div className="flex flex-col md:flex-row justify-between items-center">
       <div className="mb-4 md:mb-0">
         <h3 className="text-xl font-bold">[LEVI LOSEKE]</h3>
-        <p className="text-gray-300 mt-2">Développeur web & Designer</p>
+        <p className="text-gray-300 mt-2"> Infographe, Développeur web & Designer</p>
       </div>
       
       <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
