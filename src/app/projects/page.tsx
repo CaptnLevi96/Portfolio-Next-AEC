@@ -41,7 +41,7 @@ export default function Projects() {
             {/* Bouton de retour */}
             <div className="mb-12">
   <Link href="/" legacyBehavior>
-    <a className="bg-[#40c057] text-white px-6 py-3 rounded-full hover:bg-[#2b8a3e] transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2">
+    <a className="bg-[#40c057] text-white px-6 py-3 rounded-full hover:bg-[#2b8a3e] transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2  font-bold">
       <FaArrowLeft />
       Retour à la page principale
     </a>
