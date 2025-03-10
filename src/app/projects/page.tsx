@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { FaArrowLeft } from "react-icons/fa";
+
 
 export default function Projects() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -38,13 +40,13 @@ export default function Projects() {
           <div className="max-w-7xl mx-auto px-8">
             {/* Bouton de retour */}
             <div className="mb-12">
-              <Link href="/" legacyBehavior>
-                <a className="bg-[#40c057] text-white px-6 py-3 rounded-full hover:bg-[#2b8a3e] transition-all duration-300 hover:shadow-lg inline-flex items-center">
-                  Retour à la page principale
-                </a>
-              </Link>
-            </div>
-            
+  <Link href="/" legacyBehavior>
+    <a className="bg-[#40c057] text-white px-6 py-3 rounded-full hover:bg-[#2b8a3e] transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2">
+      <FaArrowLeft />
+      Retour à la page principale
+    </a>
+  </Link>
+</div>
             {/* Titre et introduction */}
             <h1 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-[#1a472a] to-[#40c057] text-transparent bg-clip-text">
               Détails de projets web

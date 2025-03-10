@@ -6,6 +6,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { FaArrowRight } from "react-icons/fa";
+
+
 
 // Définition des types
 type Project = {
@@ -288,10 +291,19 @@ export default function Home() {
            Développeur web passionné par la création d'expériences digitales innovantes. Fort d'une formation en infographie et en développement web, je combine créativité visuelle et expertise technique pour donner vie à des projets web uniques.<br/> <br/>Mon parcours polyvalent me permet d'apporter une vision globale, de la conception graphique à l'implémentation technique.
           </p>
                 <div className="flex gap-6">
-                <button className="group bg-[#40c057] text-white px-10 py-4 rounded-full hover:bg-[#2b8a3e] transition-all hover:shadow-lg relative overflow-hidden">
-                  <span className="relative z-10">Me Contacter</span>
-                  <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
-                </button>
+                <button 
+                onClick={(e) => {
+                  e.preventDefault();
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="group bg-[#40c057] text-white px-10 py-4 rounded-full hover:bg-[#2b8a3e] transition-all hover:shadow-lg relative overflow-hidden"
+              >
+                <span className="relative z-10">Me contacter</span>
+                <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
+              </button>
                 <a 
   href="/LeviLosekeCV.pdf" 
   download
@@ -887,12 +899,13 @@ export default function Home() {
 
 {/* Bouton Détails sur les projets */}
 <div className="mt-16 flex justify-center">
-<Link href="/projects" legacyBehavior>
-  <a className="group bg-[#40c057] text-white px-10 py-4 rounded-full hover:bg-[#2b8a3e] transition-all hover:shadow-lg relative overflow-hidden inline-flex items-center">
-    <span className="relative z-10 font-bold">Détails sur les projets</span>
-    <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
-  </a>
-</Link>
+  <Link href="/projects" legacyBehavior>
+    <a className="group bg-[#40c057] text-white px-10 py-4 rounded-full hover:bg-[#2b8a3e] transition-all hover:shadow-lg relative overflow-hidden inline-flex items-center gap-2">
+      <span className="relative z-10 font-bold">Détails sur les projets</span>
+      <FaArrowRight className="relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
+      <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
+    </a>
+  </Link>
 </div>
   </div>
 </section>
