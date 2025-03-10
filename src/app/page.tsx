@@ -236,7 +236,21 @@ export default function Home() {
               </a>
             </li>
             
-            <li><a href="#contact" className="hover:text-[#40c057] transition-colors">Contact</a></li>
+            <li>
+            <a 
+              href="#contact" 
+              className="hover:text-[#40c057] transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Contact
+            </a>
+          </li>
           </ul>
         </nav>
       </header>
@@ -869,6 +883,16 @@ export default function Home() {
         </div>
       </div>
     ))}
+</div>
+
+{/* Bouton Détails sur les projets */}
+<div className="mt-16 flex justify-center">
+<Link href="/projects" legacyBehavior>
+  <a className="group bg-[#40c057] text-white px-10 py-4 rounded-full hover:bg-[#2b8a3e] transition-all hover:shadow-lg relative overflow-hidden inline-flex items-center">
+    <span className="relative z-10 font-bold">Détails sur les projets</span>
+    <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
+  </a>
+</Link>
 </div>
   </div>
 </section>
