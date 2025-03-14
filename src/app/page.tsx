@@ -757,7 +757,7 @@ export default function Home() {
       image: "/jeux.png",
       category: "Programmation",
       tags: ["HTML", "CSS", "JavaScript", "Node.js"],
-      url: "https://github.com/CaptnLevi96/Projet-Jeux-La-Porte"
+      url: "https://projet-jeux-la-porte-1.vercel.app/"
     },
     {
       title: "Liste à faire",
