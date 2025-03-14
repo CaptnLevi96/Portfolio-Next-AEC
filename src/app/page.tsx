@@ -170,92 +170,104 @@ export default function Home() {
 
       {/* Header avec navigation */}
       <header 
-        className={`
-          py-4 
-          fixed 
-          left-1/2 
-          -translate-x-1/2 
-          bg-[#a4e0b0]/90 
-          backdrop-blur-md 
-          z-50 
-          shadow-sm 
-          rounded-full
-          px-8
-          mt-4
-          transition-all 
-          duration-300
-          font-bold
-          ${isLoaded ? 'opacity-100' : 'opacity-0'}
-          ${isNavVisible ? 'translate-y-0' : '-translate-y-full'}
-        `}
-      >
-        <nav>
-          <ul className="flex space-x-8 text-lg">
-            <li>
-              <a 
-                href="#home" 
-                className="hover:text-[#40c057] transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const homeSection = document.getElementById('home');
-                  if (homeSection) {
-                    homeSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                Accueil
-              </a>
-            </li>
-            <li>
-              <a 
-                href="#about" 
-                className="hover:text-[#40c057] transition-colors" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  const aboutSection = document.getElementById('about');
-                  if (aboutSection) {
-                    aboutSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                À propos
-              </a>
-            </li>
-
-            <li>
-              <a 
-                href="#projects" 
-                className="hover:text-[#40c057] transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const projectsSection = document.getElementById('projects');
-                  if (projectsSection) {
-                    projectsSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                Projets
-              </a>
-            </li>
-            
-            <li>
-            <a 
-              href="#contact" 
-              className="hover:text-[#40c057] transition-colors"
-              onClick={(e) => {
-                e.preventDefault();
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              Contact
-            </a>
-          </li>
-          </ul>
-        </nav>
-      </header>
+  className={`
+    py-4 
+    fixed 
+    left-1/2 
+    -translate-x-1/2 
+    bg-[#a4e0b0]/90 
+    backdrop-blur-md 
+    z-50 
+    shadow-sm 
+    rounded-full
+    px-8
+    mt-4
+    transition-all 
+    duration-300
+    font-bold
+    ${isLoaded ? 'opacity-100' : 'opacity-0'}
+    ${isNavVisible ? 'translate-y-0' : '-translate-y-full'}
+  `}
+>
+  <nav className="flex items-center justify-between">
+    <div className="flex items-center">
+      {/* Navigation principale */}
+      <ul className="flex space-x-8 text-lg">
+        <li>
+          <a 
+            href="#home" 
+            className="hover:text-[#40c057] transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              const section = document.getElementById('home');
+              if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Accueil
+          </a>
+        </li>
+        <li>
+          <a 
+            href="#about" 
+            className="hover:text-[#40c057] transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              const section = document.getElementById('about');
+              if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            À propos
+          </a>
+        </li>
+        <li>
+          <a 
+            href="#projects" 
+            className="hover:text-[#40c057] transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              const section = document.getElementById('projects');
+              if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Projets
+          </a>
+        </li>
+        <li>
+          <a 
+            href="#contact" 
+            className="hover:text-[#40c057] transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              const section = document.getElementById('contact');
+              if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+      
+      {/* Sélecteur de langue */}
+      <div className="ml-8 flex items-center">
+        <Link 
+          href="/en" 
+          className="flex items-center px-3 py-1 bg-[#40c057]/10 rounded-full hover:bg-[#40c057]/20 transition-colors"
+        >
+          <span className="mr-1">🇬🇧</span>
+          <span>EN</span>
+        </Link>
+      </div>
+    </div>
+  </nav>
+</header>
 
       {/* Contenu Principal */}
       <div>
