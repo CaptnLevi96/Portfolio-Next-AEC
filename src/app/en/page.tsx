@@ -571,12 +571,11 @@ export default function Home() {
 <section className="min-h-screen bg-gradient-to-b from-[#2a2a6a] to-[#1a1a4f] text-white py-20">
   <div className="max-w-7xl mx-auto px-8">
     <h2 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-[#6a7fb8] to-[#9370db] text-transparent bg-clip-text animate-gradient">
-      Mes compétences
+      Skills
     </h2>
     
     <p className="text-gray-300 text-center text-xl max-w-3xl mx-auto mb-16">
-      Au fil de mes expériences et formations, j'ai développé une expertise technique approfondie, combinant programmation, design et outils digitaux pour créer des solutions web complètes.
-    </p>
+    Through my experiences and training, I have developed in-depth technical expertise, combining programming, design and digital tools to create complete web solutions.    </p>
 
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
       {/* PROGRAMMATION */}
@@ -586,7 +585,7 @@ export default function Home() {
                     hover:transform hover:-translate-y-2 hover:shadow-xl
                     hover:shadow-[#6a7fb8]/20 hover:bg-[#2a2a4f]">
           <h3 className="text-3xl font-bold mb-6 text-[#6a7fb8] group-hover:text-[#9370db] transition-colors">
-            Programmation
+          Programming
           </h3>
           <div className="space-y-4">
             {[
@@ -632,7 +631,7 @@ export default function Home() {
                     hover:transform hover:-translate-y-2 hover:shadow-xl
                     hover:shadow-[#6a7fb8]/20 hover:bg-[#2a2a4f]">
           <h3 className="text-3xl font-bold mb-6 text-[#6a7fb8] group-hover:text-[#9370db] transition-colors">
-            Design
+          Graphic design
           </h3>
           <div className="space-y-4">
             {[
@@ -671,7 +670,7 @@ export default function Home() {
                     hover:transform hover:-translate-y-2 hover:shadow-xl
                     hover:shadow-[#6a7fb8]/20 hover:bg-[#2a2a4f]">
           <h3 className="text-3xl font-bold mb-6 text-[#6a7fb8] group-hover:text-[#9370db] transition-colors">
-            Autres
+            Others
           </h3>
           <div className="space-y-4">
             {[
@@ -730,15 +729,13 @@ export default function Home() {
 <section id="projects" className="min-h-screen bg-[#E6FFE6] py-20">
   <div className="max-w-7xl mx-auto px-8">
     <h2 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#1a472a] to-[#40c057] text-transparent bg-clip-text animate-gradient">
-      Mes projets
-    </h2>
+    Projects    </h2>
     <p className="text-[#1a472a] text-center text-xl max-w-3xl mx-auto mb-16">
-      Découvrez une sélection de mes réalisations qui illustrent mon expertise en développement web et en design. Chaque projet représente un défi unique relevé avec créativité et rigueur technique.
-    </p>
+    Discover a selection of my work, showcasing my expertise in web development and design. Each project represents a unique challenge, met with creativity and technical rigor.    </p>
 
     {/* Filtres */}
     <div className="flex justify-center gap-4 mb-12 font-bold">
-      {['Programmation', 'Design graphique / UI-UX'].map((filter) => (
+      {['Programming', 'Graphic design / UI-UX'].map((filter) => (
         <button
           key={filter}
           onClick={() => setActiveFilter(filter)}
@@ -757,74 +754,74 @@ export default function Home() {
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   {[
     {
-      title: "Site web d'une Pépinière",
-      description: "Site d'une pépiniere avec un panier une barre recherche filtre et catégories.",
+      title: "Nursery website",
+      description: "Nursery website with a basket, a search bar, filter and categories.",
       image: "/pepiniere.png",
-      category: "Programmation",
+      category: "Programming",
       tags: ["HTML", "CSS", "JavaScript"],
       url: "https://captnlevi96.github.io/Projet-pepiniere/Index.html"
     },
     {
-      title: "Jeux avec tableau de score",
-      description: "Jeux qui consiste a rammaser une clé, éviter les ennemies et attendre la porte.",
+      title: "Games with scoreboard",
+      description: "Games that consist of picking up a key, avoiding enemies and waiting for the door.",
       image: "/jeux.png",
-      category: "Programmation",
+      category: "Programming",
       tags: ["HTML", "CSS", "JavaScript", "Node.js"],
       url: "https://projet-jeux-la-porte-1.vercel.app/"
     },
     {
-      title: "Liste à faire",
-      description: "Liste à faire dévéloppé avec Inteliji IDEA à l'aide de la librairie REACT.",
+      title: "To-do-list",
+      description: "To-do list developed with Intellij IDEA using the REACT library.",
       image: "/list.png",
-      category: "Programmation",
+      category: "Programming",
       tags: ["React", "CSS", "IntelliJ IDEA"],
       url: "https://github.com/CaptnLevi96/liste-de-tache" 
     },
     {
-      title: "Quizz sur la géographie",
-      description: "Un quiz interactif en HTML, CSS et JavaScript avec questions aléatoires. 🚀",
+      title: "Geography Quiz",
+      description: "An interactive quiz in HTML, CSS and JavaScript with random questions. 🚀",
       image: "/quiz.png",
-      category: "Programmation",
+      category: "Programming",
       tags: ["HTML", "CSS", "JavaScript"],
       url: "https://captnlevi96.github.io/Quiz-geographie/" 
     },
     {
       title: "Librarie La Ravelle",
-      description: "Site web transactionnel d'une bibliothèque produite avec la librairie Laravel.",
+      description: "Transactional website of a library produced with the Laravel library.",
       image: "/laravelle.png",
-      category: "Programmation",
+      category: "Programming",
       tags: ["MySQL", "PHP", "Tailwind", "JavaScript", "MySQL"],
       url: "https://github.com/CaptnLevi96/ProjetLaravel1" 
     },
     {
       title: "Benactor",
-      description: "Développement d'une application web moderne permettant la coordination entre organisations et bénévoles.",
+      description: "Development of a modern web application enabling coordination between organizations and volunteers.",
       image: "/benactor.png",
-      category: "Programmation",
+      category: "Programming",
       tags: ["Next.js", "Drizzle", "Hono","PostgresQL"],
       url: "https://www.benactor.com/" 
     },
     {
       title: "The Motherland",
-      description: "Une illustration célébrant l’Afrique, son identité et sa culture. Fusion de symboles, couleurs panafricaines et éléments graphiques pour un hommage vibrant au continent. 🌍🎨",
+      description: "An illustration celebrating Africa, its identity, and its culture. A fusion of symbols, pan-African colors, and graphic elements for a vibrant tribute to the continent. 🌍🎨",
       image: "/africa.png",
-      category: "Design graphique / UI-UX",
+      category: "Graphic design / UI-UX",
       tags: ["Figma", "Adobe Illustrator"],
       url: "https://www.behance.net/gallery/202984359/Native-Motherland" 
     },
     {
       title: "Recolte",
-      description: "Moodboard et maquette finale de d'un site web d'une épicerie biologique.",
+      description: "Moodboard and final mockup of an organic grocery store website.",
       image: "/recolte.png",
-      category: "Design graphique / UI-UX",
+      category: "Graphic design / UI-UX",
       tags: ["Figma"],
       url: "https://www.behance.net/gallery/201731649/Maquette-pour-Epicerie-biologique-Recette" 
     },
     {
       title: "Je t'aime",
-      description: "Fresque multilingue d'une mosaïque conçue avec la phrase j'aime pour la salle de réception La Sirène à Laval.",
+      description: "Multilingual mosaic fresco designed with the phrase I love for the La Sirène reception hall in Laval.",
       image: "/sirene.png",
-      category: "Design graphique / UI-UX",
+      category: "Graphic design / UI-UX",
       tags: ["Adobe Illustrator"],
       url: "https://www.behance.net/gallery/183773141/I-love-you-Mozaic"
     },
@@ -832,27 +829,27 @@ export default function Home() {
 
     {
       title: "Buqs",
-      description: "Conception UI/UX de Buqs, une application de livres numériques offrant une navigation intuitive, une interface moderne et des options de lecture personnalisables.",
+      description: "UI/UX design of Buqs, an e-book app offering intuitive navigation, a modern interface, and customizable reading options.",
       image: "/buqs.png",
-      category: "Design graphique / UI-UX",
+      category: "Graphic design / UI-UX",
       tags: ["Figma"],
       url: "https://www.behance.net/gallery/195433225/UIUX-design-for-a-e-book-application-named-Buqs" 
     },
 
     {
-      title: "Poster Art tridimensionnelle",
-      description: "Une illustration dynamique mettant en avant l’art 3D, avec une typographie métallisée, des formes flottantes et un fond cosmique vibrant.",
+      title: "Three-dimensional Art Poster",
+      description: "A dynamic illustration featuring 3D art, featuring metallic typography, floating shapes, and a vibrant cosmic background.",
       image: "/3D.png",
-      category: "Design graphique / UI-UX",
+      category: "Graphic design / UI-UX",
       tags: ["Adobe Illustrator", "Adobe Photoshop"],
       url: "https://www.behance.net/gallery/203123971/3D-Art-Poster" 
     },
 
     {
-      title: "Ancien portfolio mobile",
-      description: "La maquette moodboard Figma de mon ancien portfolio de développeur web, que j'avais conçue avant en utilisant HTML, CSS et JavaScript.",
+      title: "Old mobile portfolio",
+      description: "The Figma moodboard mockup of my old web developer portfolio, which I previously designed using HTML, CSS, and JavaScript.",
       image: "/portfolio.png",
-      category: "Design graphique / UI-UX",
+      category: "Graphic design / UI-UX",
       tags: ["Figma",  "Adobe Photoshop"],
       url: "https://www.behance.net/gallery/220772947/Mobile-portfolio-template" 
     }
@@ -878,7 +875,7 @@ export default function Home() {
               onClick={() => window.open(project.url, '_blank')} 
               className="bg-white text-[#40c057] px-6 py-2 rounded-full font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
             >
-              Voir le projet
+              See the project
             </button>
           </div>
         </div>
@@ -911,9 +908,9 @@ export default function Home() {
 
 {/* Bouton Détails sur les projets */}
 <div className="mt-16 flex justify-center">
-  <Link href="/projects" legacyBehavior>
+  <Link href="/projects-en" legacyBehavior>
     <a className="group bg-[#40c057] text-white px-10 py-4 rounded-full hover:bg-[#2b8a3e] transition-all hover:shadow-lg relative overflow-hidden inline-flex items-center gap-2">
-      <span className="relative z-10 font-bold">Détails sur les projets</span>
+      <span className="relative z-10 font-bold">Project details</span>
       <FaArrowRight className="relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
       <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
     </a>
@@ -925,17 +922,15 @@ export default function Home() {
 <section id="contact" className="min-h-screen bg-gradient-to-b from-[#E6FFE6] to-[#c8e6c9] py-20">
   <div className="max-w-7xl mx-auto px-8">
     <h2 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-[#1a472a] to-[#40c057] text-transparent bg-clip-text animate-gradient">
-      Me contacter
+      I can't wait to hear from you!
     </h2>
     
     <p className="text-[#1a472a] text-center text-xl max-w-3xl mx-auto mb-16">
-      Vous avez un projet en tête ou vous souhaitez simplement échanger ? N'hésitez pas à me contacter, je serais ravi de discuter avec vous !
-    </p>
-    
+    Do you have a project in mind or would you simply like to chat? Don't hesitate to contact me; I'd love to chat with you!</p>
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       {/* Formulaire de contact */}
       <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-        <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Envoyez-moi un message</h3>
+        <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Send me a message</h3>
         
         <form 
   ref={formRef}
@@ -944,10 +939,10 @@ export default function Home() {
     e.preventDefault();
     
     emailjs.sendForm(
-      'service_l7a0gq2',    // Votre ID de service
-      'template_c556s79',   // Votre ID de template
+      'service_l7a0gq2',    // Ta ID de service
+      'template_c556s79',   // Ta ID de template
       formRef.current!,
-      'i0XmF5NpB-1smVxNi'  // Remplacez par votre clé publique/User ID
+      'i0XmF5NpB-1smVxNi'  // Remplace par ta clé publique/User ID
     )
     .then(() => {
       alert("Message envoyé avec succès !");
@@ -960,39 +955,39 @@ export default function Home() {
 >
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div>
-      <label htmlFor="name" className="block text-[#1a472a] font-medium mb-2">Nom</label>
+      <label htmlFor="name" className="block text-[#1a472a] font-medium mb-2">Name</label>
       <input 
         type="text" 
         id="name" 
         name="name" 
         required 
         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all"
-        placeholder="Votre nom"
+        placeholder="Your name"
       />
     </div>
     
     <div>
-      <label htmlFor="email" className="block text-[#1a472a] font-medium mb-2">Email</label>
+      <label htmlFor="email" className="block text-[#1a472a] font-medium mb-2">Email adress</label>
       <input 
         type="email" 
         id="email" 
         name="email" 
         required 
         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all"
-        placeholder="votre@email.com"
+        placeholder="your@email.com"
       />
     </div>
   </div>
   
   <div>
-    <label htmlFor="subject" className="block text-[#1a472a] font-medium mb-2">Sujet</label>
+    <label htmlFor="subject" className="block text-[#1a472a] font-medium mb-2">Subject</label>
     <input 
       type="text" 
       id="subject" 
       name="subject" 
       required 
       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all"
-      placeholder="Sujet de votre message"
+      placeholder="Subject of your message"
     />
   </div>
   
@@ -1004,7 +999,7 @@ export default function Home() {
       rows={5} 
       required 
       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#40c057] focus:border-transparent transition-all resize-none"
-      placeholder="Votre message..."
+      placeholder="Your message..."
     ></textarea>
   </div>
   
@@ -1012,7 +1007,7 @@ export default function Home() {
     type="submit" 
     className="group bg-[#40c057] text-white px-8 py-3 rounded-full hover:bg-[#2b8a3e] transition-all duration-300 hover:shadow-lg relative overflow-hidden"
   >
-    <span className="relative z-10">Envoyer le message</span>
+    <span className="relative z-10">Send the message</span>
     <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
   </button>
 </form>
@@ -1021,7 +1016,7 @@ export default function Home() {
       {/* Informations de contact et réseaux sociaux */}
       <div className="space-y-8">
         <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-          <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Mes coordonnées</h3>
+          <h3 className="text-2xl font-bold text-[#1a472a] mb-6">My contact details</h3>
           
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
@@ -1043,7 +1038,7 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <p className="text-gray-500">Téléphone</p>
+                <p className="text-gray-500">Phone</p>
                 <a href="tel:+1234567890" className="text-[#1a472a] hover:text-[#40c057] transition-colors">(438)-233-3595</a>
               </div>
             </div>
@@ -1056,8 +1051,8 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <p className="text-gray-500">Localisation</p>
-                <p className="text-[#1a472a]">Laval, Québec, Canada</p>
+                <p className="text-gray-500">Location</p>
+                <p className="text-[#1a472a]">Laval, Quebec, Canada</p>
               </div>
             </div>
           </div>
@@ -1065,7 +1060,7 @@ export default function Home() {
         
         {/* Réseaux sociaux */}
         <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
-          <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Suivez-moi</h3>
+          <h3 className="text-2xl font-bold text-[#1a472a] mb-6">Follow me on social media</h3>
           
           <div className="flex space-x-4">
             {/* LinkedIn */}
@@ -1123,20 +1118,20 @@ export default function Home() {
     <div className="flex flex-col md:flex-row justify-between items-center">
       <div className="mb-4 md:mb-0">
         <h3 className="text-xl font-bold">[LEVI LOSEKE]</h3>
-        <p className="text-gray-300 mt-2"> Infographe, Développeur web & Designer</p>
+        <p className="text-gray-300 mt-2"> Graphic Designer, Web Developer & Designer</p>
       </div>
       
       <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-        <a href="#home" className="hover:text-[#40c057] transition-colors">Accueil</a>
-        <a href="#about" className="hover:text-[#40c057] transition-colors">À propos</a>
-        <a href="#projects" className="hover:text-[#40c057] transition-colors">Projets</a>
+        <a href="#home" className="hover:text-[#40c057] transition-colors">Home</a>
+        <a href="#about" className="hover:text-[#40c057] transition-colors">About</a>
+        <a href="#projects" className="hover:text-[#40c057] transition-colors">Projects</a>
         <a href="#contact" className="hover:text-[#40c057] transition-colors">Contact</a>
       </div>
     </div>
     
     <div className="border-t border-gray-700 mt-6 pt-6 flex flex-col md:flex-row justify-between items-center">
       <p className="text-gray-400 text-sm mb-4 md:mb-0">
-        © {new Date().getFullYear()} Levi Loseke. Tous droits réservés.
+        © {new Date().getFullYear()} Levi Loseke. All rights reserved.
       </p>
       
       <div className="flex space-x-4">
