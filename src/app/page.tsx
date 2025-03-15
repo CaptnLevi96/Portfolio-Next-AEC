@@ -822,7 +822,7 @@ export default function Home() {
     {
       title: "Je t'aime",
       description: "Fresque multilingue d'une mosaïque conçue avec la phrase j'aime pour la salle de réception La Sirène à Laval.",
-      image: "/sirene.png",
+      image: "/LaSirene.png",
       category: "Design graphique / UI-UX",
       tags: ["Adobe Illustrator"],
       url: "https://www.behance.net/gallery/183773141/I-love-you-Mozaic"

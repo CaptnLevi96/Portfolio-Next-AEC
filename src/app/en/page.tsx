@@ -820,7 +820,7 @@ export default function Home() {
     {
       title: "Je t'aime",
       description: "Multilingual mosaic fresco designed with the phrase I love for the La Sirène reception hall in Laval.",
-      image: "/sirene.png",
+      image: "/LaSirene.png",
       category: "Graphic design / UI-UX",
       tags: ["Adobe Illustrator"],
       url: "https://www.behance.net/gallery/183773141/I-love-you-Mozaic"
