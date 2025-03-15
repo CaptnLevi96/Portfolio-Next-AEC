@@ -469,11 +469,10 @@ export default function Home() {
 <section className="min-h-screen bg-gradient-to-b from-[#1b1b55] to-[#2a2a6a] text-white py-20">
   <div className="max-w-7xl mx-auto px-8">
     <h2 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-[#9bb4f9] to-[#6a7fb8] text-transparent bg-clip-text animate-gradient">
-      Mon parcours académique
+    My academic journey
     </h2>
     <p className="text-gray-300 text-center text-xl max-w-3xl mx-auto mb-12">
-      Ma formation combine créativité et technique, avec une spécialisation en développement web qui complète parfaitement mes compétences en design graphique.
-    </p>
+    My training combines creativity and technique, with a specialization in web development which perfectly complements my skills in graphic design.</p>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div className="space-y-8 relative">
         {/* Ligne de temps verticale */}
@@ -481,26 +480,27 @@ export default function Home() {
 
         {[
           {
-            title: "AEC - Développement de sites web transactionnels",
+            title: "AEC - Web Development for Transactional Sites",
             school: "Collège Ahuntsic",
-            period: "2024 - 2025 (en cours)",
-            description: "Formation approfondie en développement web et programmation",
+            period: "2024 - 2025 (ongoing)",
+            description: "In-depth training in web development and programming",
             skills: ["React", "Node.js", "Next.js", "TypeScript", "SQL"]
           },
           {
-            title: "DEC - Infographie en prémédia",
+            title: "DEC - Graphic Design in Pre-media",
             school: "Collège Ahuntsic",
             period: "2022",
-            description: "Formation en design graphique et production média",
-            skills: ["Adobe Suite", "Design", "Mise en page", "Typographie"]
+            description: "Training in graphic design and media production",
+            skills: ["Adobe Suite", "Design", "Layout", "Typography"]
           },
           {
-            title: "Diplôme d'étude secondaire",
-            school: "École secondaire Horizon-Jeunesse",
+            title: "High School Diploma",
+            school: "Horizon-Jeunesse Secondary School",
             period: "2016",
-            description: "Formation générale",
-            skills: ["Travail d'équipe", "Communication", "Organisation"]
+            description: "General education",
+            skills: ["Teamwork", "Communication", "Organization"]
           }
+
         ].map((edu, index) => (
           <div
             key={index}
