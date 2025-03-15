@@ -40,7 +40,7 @@ export default function Projects() {
           <div className="max-w-7xl mx-auto px-8">
             {/* Bouton de retour */}
             <div className="mb-12">
-  <Link href="/en" legacyBehavior>
+  <Link href="/projects" legacyBehavior>
     <a className="bg-[#40c057] text-white px-6 py-3 rounded-full hover:bg-[#2b8a3e] transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2  font-bold">
       <FaArrowLeft />
       Back to main page
