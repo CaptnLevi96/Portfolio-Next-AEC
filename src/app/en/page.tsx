@@ -19,7 +19,7 @@ type Project = {
 };
 
 export default function Home() {
-  const titles = ["Infographe", "Développeur web", "Designer web"];
+  const titles = ["Graphic Designer", "Web Developer", "Web Designer"];
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -205,7 +205,7 @@ export default function Home() {
               }
             }}
           >
-            Accueil
+            Home Page
           </a>
         </li>
         <li>
@@ -220,7 +220,7 @@ export default function Home() {
               }
             }}
           >
-            À propos
+            About Me
           </a>
         </li>
         <li>
@@ -235,7 +235,7 @@ export default function Home() {
               }
             }}
           >
-            Projets
+            Projects
           </a>
         </li>
         <li>
@@ -299,8 +299,9 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-#1f4b2e mb-10 text-xl leading-relaxed font-normal">
-           Développeur web passionné par la création d'expériences digitales innovantes. Fort d'une formation en infographie et en développement web, je combine créativité visuelle et expertise technique pour donner vie à des projets web uniques.<br/> <br/>Mon parcours polyvalent me permet d'apporter une vision globale, de la conception graphique à l'implémentation technique.
-          </p>
+  Passionate web developer dedicated to creating innovative digital experiences. With a background in graphic design and web development, I combine visual creativity and technical expertise to bring unique web projects to life.<br/> <br/>
+  My versatile journey allows me to provide a comprehensive vision, from graphic design to technical implementation.
+</p>
                 <div className="flex gap-6">
                 <button 
                 onClick={(e) => {
@@ -312,7 +313,7 @@ export default function Home() {
                 }}
                 className="group bg-[#40c057] text-white px-10 py-4 rounded-full hover:bg-[#2b8a3e] transition-all hover:shadow-lg relative overflow-hidden"
               >
-                <span className="relative z-10">Me contacter</span>
+                <span className="relative z-10">Get in touch with!</span>
                 <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
               </button>
                 <a 
@@ -320,7 +321,7 @@ export default function Home() {
   download
                 className="group border-2 border-[#40c057] text-[#1a472a] px-10 py-4 rounded-full hover:bg-[#40c057] hover:text-white transition-all hover:shadow-lg relative overflow-hidden inline-flex items-center justify-center"
               >
-                <span className="relative z-10">Télécharger mon CV</span>
+                <span className="relative z-10">Download my resume</span>
                 <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#40c057] to-[#69db7c] transition-all duration-300 group-hover:w-full -z-10"></div>
               </a>
 
@@ -358,11 +359,11 @@ export default function Home() {
 >
   <div className="max-w-7xl mx-auto px-8">
     <h2 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-[#40c057] to-[#69db7c] text-transparent bg-clip-text animate-gradient">
-      Mon parcours professionnel
+    My professional journey
     </h2>
 
-<p className="text-gray-300 text-center text-xl max-w-3xl mx-auto mb-4">
-  Mon expérience professionnelle diversifiée m'a permis de développer des compétences variées, de l'infographie à la gestion de projet, en passant par le service client et la production.
+    <p className="text-gray-300 text-center text-xl max-w-3xl mx-auto mb-4">
+  My diverse professional experience has allowed me to develop a wide range of skills, from graphic design to project management, as well as customer service and production.
 </p>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div className="relative flex justify-center">
@@ -389,32 +390,32 @@ export default function Home() {
 
         {[
           {
-            title: "Infographe",
+            title: "Graphic Designer",
             company: "Flash Grafix",
-            period: "Juin 2022 - Janvier 2024",
-            description: "Création et conception graphique pour divers projets d'impression et de communication visuelle",
-            skills: ["Adobe Suite", "Design", "Mise en page", "Gestion de projet", "Service client"]
+            period: "June 2022 - January 2024",
+            description: "Graphic creation and design for various print and visual communication projects",
+            skills: ["Adobe Suite", "Design", "Layout", "Project Management", "Customer Service"]
           },
           {
-            title: "Aide pressier",
+            title: "Press Assistant",
             company: "SupremeX Inc.",
-            period: "Mai 2022 - Juin 2022",
-            description: "Support aux opérations d'impression et contrôle qualité",
-            skills: ["Contrôle qualité", "Travail d'équipe", "Organisation"]
+            period: "May 2022 - June 2022",
+            description: "Support for printing operations and quality control",
+            skills: ["Quality Control", "Teamwork", "Organization"]
           },
           {
-            title: "Préparateur de commandes",
+            title: "Order Picker",
             company: "Hose Power Canada",
-            period: "Mai 2021 - Janvier 2022",
-            description: "Gestion logistique et préparation précise des commandes clients",
-            skills: ["Logistique", "Organisation", "Service client", "Gestion des stocks"]
+            period: "May 2021 - January 2022",
+            description: "Logistics management and precise order preparation for customers",
+            skills: ["Logistics", "Organization", "Customer Service", "Inventory Management"]
           },
           {
-            title: "Imprimeur sur presse numérique",
+            title: "Digital Press Operator",
             company: "Bureau en gros",
-            period: "Mai 2019 - Août 2019",
-            description: "Production d'impressions numériques et service client personnalisé",
-            skills: ["Impression numérique", "Service client", "Gestion du temps"]
+            period: "May 2019 - August 2019",
+            description: "Digital printing production and personalized customer service",
+            skills: ["Digital Printing", "Customer Service", "Time Management"]
           }
         ].map((exp, index) => (
           <div
