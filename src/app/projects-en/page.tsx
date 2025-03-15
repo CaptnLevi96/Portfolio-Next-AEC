@@ -11,7 +11,7 @@ export default function Projects() {
   const [isShattering, setIsShattering] = useState(false);
   const [showContent, setShowContent] = useState(false);
 
-  // Gestion de la séquence de chargement initiale
+  // Initial loading sequence management
   useEffect(() => {
     setTimeout(() => {
       setIsShattering(true);
@@ -38,46 +38,47 @@ export default function Projects() {
       <div className={`min-h-screen flex flex-col bg-[#E6FFE6] transition-opacity duration-500 ${showContent ? 'opacity-100' : 'opacity-0'}`}>
         <div className="flex-grow py-20">
           <div className="max-w-7xl mx-auto px-8">
-            {/* Bouton de retour */}
+            {/* Back button */}
             <div className="mb-12">
-  <Link href="/projects" legacyBehavior>
-    <a className="bg-[#40c057] text-white px-6 py-3 rounded-full hover:bg-[#2b8a3e] transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2  font-bold">
-      <FaArrowLeft />
-      Back to main page
-    </a>
-  </Link>
-</div>
-            {/* Titre et introduction */}
+              <Link href="/en" legacyBehavior>
+                <a className="bg-[#40c057] text-white px-6 py-3 rounded-full hover:bg-[#2b8a3e] transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2 font-bold">
+                  <FaArrowLeft />
+                  Back to main page
+                </a>
+              </Link>
+            </div>
+            
+            {/* Title and introduction */}
             <h1 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-[#1a472a] to-[#40c057] text-transparent bg-clip-text">
-              Détails de projets web
+              Web Project Details
             </h1>
             
             <p className="text-[#1a472a] text-center text-xl max-w-3xl mx-auto mb-20">
-              Bienvenue dans mon univers de développement web! Explorez ma collection de 
-              projets et plongez dans les détails de chaque réalisation. Cliquez sur un projet pour 
-              découvrir son histoire complète: les technologies que j'ai maîtrisées, les défis que j'ai 
-              relevés et les solutions innovantes que j'ai créées.
+              Welcome to my web development universe! Explore my collection of 
+              projects and dive into the details of each creation. Click on a project to 
+              discover its complete story: the technologies I've mastered, the challenges I've 
+              overcome, and the innovative solutions I've created.
             </p>
             
-            {/* Liste des projets */}
+            {/* List of projects */}
             <div className="space-y-20">
-              {/* Projet 1 */}
+              {/* Project 1 */}
               <div className="flex flex-col md:flex-row gap-10 items-center bg-white p-8 rounded-2xl shadow-xl">
                 <div className="w-full md:w-1/2 relative h-[300px]">
                   <Image 
                     src="/pepiniere.png"
-                    alt="Site web d'une Pépinière"
+                    alt="Plant Nursery Website"
                     fill
                     className="object-cover rounded-xl"
                   />
                 </div>
                 <div className="w-full md:w-1/2">
-                  <h2 className="text-3xl font-bold text-[#1a472a] mb-4">Site web d'une Pépinière</h2>
+                  <h2 className="text-3xl font-bold text-[#1a472a] mb-4">Plant Nursery Website</h2>
                   <p className="text-gray-700 mb-6">
-                    Ce projet a consisté à créer un site complet pour une pépinière avec plusieurs fonctionnalités essentielles: un panier d'achat pour les clients, une barre de recherche efficace, ainsi que des filtres et catégories pour faciliter la navigation. 
+                    This project involved creating a complete website for a plant nursery with several essential features: a shopping cart for customers, an efficient search bar, as well as filters and categories to facilitate navigation.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    <strong className="text-[#40c057]">Défis rencontrés:</strong> L'implémentation d'un système de filtrage interactif qui maintient les performances du site et l'optimisation des images pour un temps de chargement rapide.
+                    <strong className="text-[#40c057]">Challenges faced:</strong> Implementing an interactive filtering system that maintains site performance and optimizing images for fast loading times.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="text-sm px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">HTML</span>
@@ -87,23 +88,23 @@ export default function Projects() {
                 </div>
               </div>
               
-              {/* Projet 2 */}
+              {/* Project 2 */}
               <div className="flex flex-col md:flex-row gap-10 items-center bg-white p-8 rounded-2xl shadow-xl">
                 <div className="w-full md:w-1/2 relative h-[300px]">
                   <Image 
                     src="/jeux.png"
-                    alt="Jeux avec tableau de score"
+                    alt="Game with Scoreboard"
                     fill
                     className="object-cover rounded-xl"
                   />
                 </div>
                 <div className="w-full md:w-1/2">
-                  <h2 className="text-3xl font-bold text-[#1a472a] mb-4">Jeux avec tableau de score</h2>
+                  <h2 className="text-3xl font-bold text-[#1a472a] mb-4">Game with Scoreboard</h2>
                   <p className="text-gray-700 mb-6">
-                    Ce jeu interactif propose une expérience engageante où les joueurs doivent ramasser une clé, éviter les ennemis, et atteindre une porte. Le tableau de score ajoute un élément compétitif qui encourage les utilisateurs à améliorer leurs performances.
+                    This interactive game offers an engaging experience where players must collect a key, avoid enemies, and reach a door. The scoreboard adds a competitive element that encourages users to improve their performance.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    <strong className="text-[#40c057]">Défis rencontrés:</strong> La mise en place de collisions précises et d'une logique de jeu fluide. L'implémentation d'un système de score persistant a également nécessité une attention particulière.
+                    <strong className="text-[#40c057]">Challenges faced:</strong> Setting up precise collisions and smooth game logic. Implementing a persistent scoring system also required special attention.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="text-sm px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">HTML</span>
@@ -114,23 +115,23 @@ export default function Projects() {
                 </div>
               </div>
               
-              {/* Projet 3 */}
+              {/* Project 3 */}
               <div className="flex flex-col md:flex-row gap-10 items-center bg-white p-8 rounded-2xl shadow-xl">
                 <div className="w-full md:w-1/2 relative h-[300px]">
                   <Image 
                     src="/list.png"
-                    alt="Liste à faire"
+                    alt="To-Do List"
                     fill
                     className="object-cover rounded-xl"
                   />
                 </div>
                 <div className="w-full md:w-1/2">
-                  <h2 className="text-3xl font-bold text-[#1a472a] mb-4">Liste à faire</h2>
+                  <h2 className="text-3xl font-bold text-[#1a472a] mb-4">To-Do List App</h2>
                   <p className="text-gray-700 mb-6">
-                    Application de gestion de tâches développée avec IntelliJ IDEA en utilisant la bibliothèque React. Cette application permet aux utilisateurs de créer, modifier et supprimer des tâches, avec une interface intuitive et réactive.
+                    Task management application developed with IntelliJ IDEA using the React library. This application allows users to create, edit, and delete tasks with an intuitive and responsive interface.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    <strong className="text-[#40c057]">Défis rencontrés:</strong> La gestion efficace de l'état avec React et l'implémentation d'une fonctionnalité de persistance des données pour que les tâches soient sauvegardées entre les sessions.
+                    <strong className="text-[#40c057]">Challenges faced:</strong> Efficient state management with React and implementing a data persistence feature so that tasks are saved between sessions.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="text-sm px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">React</span>
@@ -140,23 +141,23 @@ export default function Projects() {
                 </div>
               </div>
               
-              {/* Projet 4 */}
+              {/* Project 4 */}
               <div className="flex flex-col md:flex-row gap-10 items-center bg-white p-8 rounded-2xl shadow-xl">
                 <div className="w-full md:w-1/2 relative h-[300px]">
                   <Image 
                     src="/quiz.png"
-                    alt="Quizz sur la géographie"
+                    alt="Geography Quiz"
                     fill
                     className="object-cover rounded-xl"
                   />
                 </div>
                 <div className="w-full md:w-1/2">
-                  <h2 className="text-3xl font-bold text-[#1a472a] mb-4">Quizz sur la géographie</h2>
+                  <h2 className="text-3xl font-bold text-[#1a472a] mb-4">Geography Quiz</h2>
                   <p className="text-gray-700 mb-6">
-                    Un quiz interactif sur la géographie mondiale avec des questions générées aléatoirement. Les utilisateurs peuvent tester leurs connaissances sur différents pays, capitales et caractéristiques géographiques.
+                    An interactive quiz on world geography with randomly generated questions. Users can test their knowledge about different countries, capitals, and geographical features.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    <strong className="text-[#40c057]">Défis rencontrés:</strong> La création d'un système de questions aléatoires qui évite les répétitions et la mise en place d'un mécanisme de scoring précis qui encourage les utilisateurs à réessayer.
+                    <strong className="text-[#40c057]">Challenges faced:</strong> Creating a random question system that avoids repetition and setting up a precise scoring mechanism that encourages users to try again.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="text-sm px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">HTML</span>
@@ -166,23 +167,23 @@ export default function Projects() {
                 </div>
               </div>
               
-              {/* Projet 5 */}
+              {/* Project 5 */}
               <div className="flex flex-col md:flex-row gap-10 items-center bg-white p-8 rounded-2xl shadow-xl">
                 <div className="w-full md:w-1/2 relative h-[300px]">
                   <Image 
                     src="/laravelle.png"
-                    alt="Librarie La Ravelle"
+                    alt="La Ravelle Library"
                     fill
                     className="object-cover rounded-xl"
                   />
                 </div>
                 <div className="w-full md:w-1/2">
-                  <h2 className="text-3xl font-bold text-[#1a472a] mb-4">Librarie La Ravelle</h2>
+                  <h2 className="text-3xl font-bold text-[#1a472a] mb-4">La Ravelle Library</h2>
                   <p className="text-gray-700 mb-6">
-                    Site web transactionnel pour une bibliothèque, développé avec le framework Laravel. Ce projet offre une plateforme complète permettant aux utilisateurs de parcourir le catalogue, de réserver des livres et de gérer leurs emprunts.
+                    Transactional website for a library, developed with the Laravel framework. This project offers a complete platform allowing users to browse the catalog, reserve books, and manage their loans.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    <strong className="text-[#40c057]">Défis rencontrés:</strong> L'implémentation d'un système d'authentification sécurisé et la création d'une base de données relationnelle optimisée pour gérer efficacement le catalogue et les transactions.
+                    <strong className="text-[#40c057]">Challenges faced:</strong> Implementing a secure authentication system and creating an optimized relational database to efficiently manage the catalog and transactions.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="text-sm px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">MySQL</span>
@@ -193,7 +194,7 @@ export default function Projects() {
                 </div>
               </div>
               
-              {/* Projet 6 */}
+              {/* Project 6 */}
               <div className="flex flex-col md:flex-row gap-10 items-center bg-white p-8 rounded-2xl shadow-xl">
                 <div className="w-full md:w-1/2 relative h-[300px]">
                   <Image 
@@ -206,10 +207,10 @@ export default function Projects() {
                 <div className="w-full md:w-1/2">
                   <h2 className="text-3xl font-bold text-[#1a472a] mb-4">Benactor</h2>
                   <p className="text-gray-700 mb-6">
-                    Développement d'une application web moderne qui facilite la coordination entre les organisations et les bénévoles. Benactor offre une plateforme où les organisations peuvent publier leurs besoins et les bénévoles peuvent offrir leur temps et leurs compétences.
+                    Development of a modern web application that facilitates coordination between organizations and volunteers. Benactor provides a platform where organizations can post their needs and volunteers can offer their time and skills.
                   </p>
                   <p className="text-gray-700 mb-6">
-                    <strong className="text-[#40c057]">Défis rencontrés:</strong> La création d'un système de mise en relation efficace entre organisations et bénévoles, ainsi que la gestion des calendriers et des disponibilités en temps réel. Un défi supplémentaire a été le manque de participation de l'un des coéquipiers, ce qui a nécessité une réorganisation des tâches et une adaptation rapide pour respecter les délais du projet.
+                    <strong className="text-[#40c057]">Challenges faced:</strong> Creating an effective matching system between organizations and volunteers, as well as managing calendars and real-time availability. An additional challenge was the lack of participation from one team member, which required task reorganization and rapid adaptation to meet project deadlines.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="text-sm px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">Next.js</span>
@@ -229,13 +230,13 @@ export default function Projects() {
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-4 md:mb-0">
                 <h3 className="text-xl font-bold">[LEVI LOSEKE]</h3>
-                <p className="text-gray-300 mt-2">Infographe, Développeur web & Designer</p>
+                <p className="text-gray-300 mt-2">Graphic Designer, Web Developer & UI Designer</p>
               </div>
             </div>
             
             <div className="border-t border-gray-700 mt-6 pt-6 flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 text-sm mb-4 md:mb-0">
-                © {new Date().getFullYear()} Levi Loseke. Tous droits réservés.
+                © {new Date().getFullYear()} Levi Loseke. All rights reserved.
               </p>
               
               <div className="flex space-x-4">
