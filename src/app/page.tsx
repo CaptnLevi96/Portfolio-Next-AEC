@@ -34,6 +34,22 @@ export default function Home() {
     about: false
   });
   
+
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    // Ce code ne s'exécute que côté client
+    setIsDesktop(window.innerWidth > 768);
+    
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 768);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   // État pour le filtre actif
   const [activeFilter, setActiveFilter] = useState<string>('Programmation');
 
@@ -797,7 +813,7 @@ export default function Home() {
                     { name: "React", level: 70 },
                     { name: "Node.js", level: 70 },
                     { name: "Next.js", level: 75 },
-                    ...(showAllSkills || window.innerWidth > 768 ? [
+                    ...(showAllSkills || isDesktop ? [
                       { name: "TypeScript", level: 65 },
                       { name: "MySQL", level: 80 },
                       { name: "MongoDB", level: 60 },
