@@ -602,77 +602,84 @@ export default function Home() {
                 <div className="absolute left-4 md:left-6 top-8 bottom-8 w-1 bg-gradient-to-b from-[#40c057] to-[#69db7c] rounded-full"></div>
 
                 {[
-                  {
-                    title: "Graphic Designer",
-                    company: "Flash Grafix",
-                    period: "June 2022 - January 2024",
-                    description: "Graphic creation and design for various print and visual communication projects",
-                    skills: ["Adobe Suite", "Design", "Layout", "Project Management", "Customer Service"]
-                  },
-                  {
-                    title: "Press Assistant",
-                    company: "SupremeX Inc.",
-                    period: "May 2022 - June 2022",
-                    description: "Support for printing operations and quality control",
-                    skills: ["Quality Control", "Teamwork", "Organization"]
-                  },
-                  {
-                    title: "Order Picker",
-                    company: "Hose Power Canada",
-                    period: "May 2021 - January 2022",
-                    description: "Logistics management and precise order preparation for customers",
-                    skills: ["Logistics", "Organization", "Customer Service", "Inventory Management"]
-                  },
-                  {
-                    title: "Digital Press Operator",
-                    company: "Bureau en gros",
-                    period: "May 2019 - August 2019",
-                    description: "Digital printing production and personalized customer service",
-                    skills: ["Digital Printing", "Customer Service", "Time Management"]
-                  }
-                ].map((exp, index) => (
-                  <div
-                    key={index}
-                    className="group relative pl-12 md:pl-16 transition-all duration-500 hover:pl-14 md:hover:pl-20"
-                  >
-                    {/* Point sur la ligne de temps */}
-                    <div className="absolute left-3 md:left-5 w-3 h-3 bg-[#40c057] rounded-full transform transition-all duration-300 group-hover:scale-150 group-hover:bg-[#69db7c]"></div>
+  {
+    title: "Web Analyst Intern",
+    company: "Le Magasin des Commerçants S&P Ltée",
+    period: "March 2025 - May 2025",
+    description: "Technical SEO audit and UX recommendations for the e-commerce site",
+    skills: ["SEO", "UX/UI", "Web Accessibility", "Technical Analysis", "Documentation"]
+  },
+  {
+    title: "Graphic Designer",
+    company: "Flash Grafix",
+    period: "June 2022 - January 2024",
+    description: "Graphic creation and design for various print and visual communication projects",
+    skills: ["Adobe Suite", "Design", "Layout", "Project Management", "Customer Service"]
+  },
+  {
+    title: "Press Assistant",
+    company: "SupremeX Inc.",
+    period: "May 2022 - June 2022",
+    description: "Support for printing operations and quality control",
+    skills: ["Quality Control", "Teamwork", "Organization"]
+  },
+  {
+    title: "Order Picker",
+    company: "Hose Power Canada",
+    period: "May 2021 - January 2022",
+    description: "Logistics management and precise order preparation for customers",
+    skills: ["Logistics", "Organization", "Customer Service", "Inventory Management"]
+  },
+  {
+    title: "Digital Press Operator",
+    company: "Bureau en gros",
+    period: "May 2019 - August 2019",
+    description: "Digital printing production and personalized customer service",
+    skills: ["Digital Printing", "Customer Service", "Time Management"]
+  }
+].map((exp, index) => (
+  <div
+    key={index}
+    className="group relative pl-12 md:pl-16 transition-all duration-500 hover:pl-14 md:hover:pl-20"
+  >
+    {/* Point sur la ligne de temps */}
+    <div className="absolute left-3 md:left-5 w-3 h-3 bg-[#40c057] rounded-full transform transition-all duration-300 group-hover:scale-150 group-hover:bg-[#69db7c]"></div>
 
-                    <div className="bg-[#1a1a3f]/80 backdrop-blur-sm p-4 md:p-6 rounded-xl 
-                                transition-all duration-300 transform hover:-translate-y-2 
-                                hover:shadow-xl hover:shadow-[#40c057]/20 
-                                hover:bg-[#2a2a4f] border border-[#40c057]/20">
-                      <div className="flex flex-col gap-2">
-                        <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                          <h3 className="text-xl md:text-2xl font-bold text-[#40c057] group-hover:text-[#69db7c] transition-colors">
-                            {exp.title}
-                          </h3>
-                          <span className="text-sm px-3 py-1 bg-[#40c057]/20 rounded-full text-[#40c057] w-fit mt-1 md:mt-0">
-                            {exp.period}
-                          </span>
-                        </div>
-                        <p className="text-[#40c057]/90 text-base md:text-lg mb-2">{exp.company}</p>
-                        <p className="text-gray-300 group-hover:text-white transition-colors text-sm md:text-base">
-                          {exp.description}
-                        </p>
-                        
-                        {/* Tags de compétences */}
-                        <div className="flex flex-wrap gap-2 mt-3">
-                          {exp.skills.map((skill, idx) => (
-                            <span 
-                              key={idx}
-                              className="text-xs md:text-sm px-2 md:px-3 py-1 bg-[#40c057]/10 rounded-full
-                                     text-[#40c057] hover:bg-[#40c057]/20 transition-all
-                                     transform hover:-translate-y-1 cursor-default"
-                            >
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+    <div className="bg-[#1a1a3f]/80 backdrop-blur-sm p-4 md:p-6 rounded-xl 
+                transition-all duration-300 transform hover:-translate-y-2 
+                hover:shadow-xl hover:shadow-[#40c057]/20 
+                hover:bg-[#2a2a4f] border border-[#40c057]/20">
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+          <h3 className="text-xl md:text-2xl font-bold text-[#40c057] group-hover:text-[#69db7c] transition-colors">
+            {exp.title}
+          </h3>
+          <span className="text-sm px-3 py-1 bg-[#40c057]/20 rounded-full text-[#40c057] w-fit mt-1 md:mt-0">
+            {exp.period}
+          </span>
+        </div>
+        <p className="text-[#40c057]/90 text-base md:text-lg mb-2">{exp.company}</p>
+        <p className="text-gray-300 group-hover:text-white transition-colors text-sm md:text-base">
+          {exp.description}
+        </p>
+        
+        {/* Tags de compétences */}
+        <div className="flex flex-wrap gap-2 mt-3">
+          {exp.skills.map((skill, idx) => (
+            <span 
+              key={idx}
+              className="text-xs md:text-sm px-2 md:px-3 py-1 bg-[#40c057]/10 rounded-full
+                     text-[#40c057] hover:bg-[#40c057]/20 transition-all
+                     transform hover:-translate-y-1 cursor-default"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+))}
               </div>
             </div>
           </div>

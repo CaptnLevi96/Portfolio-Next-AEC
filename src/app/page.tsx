@@ -534,7 +534,7 @@ export default function Home() {
                     <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
                   </button>
                   <a 
-                    href="/LeviLosekeCV.pdf" 
+                    href="/LeviLosekeCVFR.pdf" 
                     download
                     className="group border-2 border-[#40c057] text-[#1a472a] px-6 sm:px-10 py-3 sm:py-4 rounded-full hover:bg-[#40c057] hover:text-white transition-all hover:shadow-lg relative overflow-hidden inline-flex items-center justify-center w-full sm:w-auto"
                   >
@@ -605,77 +605,93 @@ export default function Home() {
                 <div className="absolute left-4 md:left-6 top-8 bottom-8 w-1 bg-gradient-to-b from-[#40c057] to-[#69db7c] rounded-full"></div>
 
                 {[
-                  {
-                    title: "Infographe",
-                    company: "Flash Grafix",
-                    period: "Juin 2022 - Janvier 2024",
-                    description: "Création et conception graphique pour divers projets d'impression et de communication visuelle",
-                    skills: ["Adobe Suite", "Design", "Mise en page", "Gestion de projet", "Service client"]
-                  },
-                  {
-                    title: "Aide pressier",
-                    company: "SupremeX Inc.",
-                    period: "Mai 2022 - Juin 2022",
-                    description: "Support aux opérations d'impression et contrôle qualité",
-                    skills: ["Contrôle qualité", "Travail d'équipe", "Organisation"]
-                  },
-                  {
-                    title: "Préparateur de commandes",
-                    company: "Hose Power Canada",
-                    period: "Mai 2021 - Janvier 2022",
-                    description: "Gestion logistique et préparation précise des commandes clients",
-                    skills: ["Logistique", "Organisation", "Service client", "Gestion des stocks"]
-                  },
-                  {
-                    title: "Imprimeur sur presse numérique",
-                    company: "Bureau en gros",
-                    period: "Mai 2019 - Août 2019",
-                    description: "Production d'impressions numériques et service client personnalisé",
-                    skills: ["Impression numérique", "Service client", "Gestion du temps"]
-                  }
-                ].map((exp, index) => (
-                  <div
-                    key={index}
-                    className="group relative pl-12 md:pl-16 transition-all duration-500 hover:pl-14 md:hover:pl-20"
-                  >
-                    {/* Point sur la ligne de temps */}
-                    <div className="absolute left-3 md:left-5 w-3 h-3 bg-[#40c057] rounded-full transform transition-all duration-300 group-hover:scale-150 group-hover:bg-[#69db7c]"></div>
+  {
+    title: "Stagiaire Analyste Web",
+    company: "Le Magasin des Commerçants S&P Ltée",
+    period: "Mars 2025 - Mai 2025",
+    description: "Audit SEO technique et recommandations pour l'amélioration du site e-commerce",
+    skills: ["SEO", "UX/UI", "Accessibilité web", "Analyse technique", "Documentation"]
+  },
+  {
+    title: "Infographe",
+    company: "Flash Grafix",
+    period: "Juin 2022 - Janvier 2024",
+    description: "Création et conception graphique pour divers projets d'impression et de communication visuelle",
+    skills: ["Adobe Suite", "Design", "Mise en page", "Gestion de projet", "Service client"]
+  },
+  {
+    title: "Aide pressier",
+    company: "SupremeX Inc.",
+    period: "Mai 2022 - Juin 2022",
+    description: "Support aux opérations d'impression et contrôle qualité",
+    skills: ["Contrôle qualité", "Travail d'équipe", "Organisation"]
+  },
+  {
+    title: "Préparateur de commandes",
+    company: "Hose Power Canada",
+    period: "Mai 2021 - Janvier 2022",
+    description: "Gestion logistique et préparation précise des commandes clients",
+    skills: ["Logistique", "Organisation", "Service client", "Gestion des stocks"]
+  },
+  {
+    title: "Imprimeur sur presse numérique",
+    company: "Bureau en gros",
+    period: "Mai 2019 - Août 2019",
+    description: "Production d'impressions numériques et service client personnalisé",
+    skills: ["Impression numérique", "Service client", "Gestion du temps"]
+  }
+].map((exp, index) => (
+  <div
+    key={index}
+    className="group relative pl-12 md:pl-16 transition-all duration-500 hover:pl-14 md:hover:pl-20"
+  >
+    {/* Point sur la ligne de temps */}
+    <div className="absolute left-3 md:left-5 w-3 h-3 bg-[#40c057] rounded-full transform transition-all duration-300 group-hover:scale-150 group-hover:bg-[#69db7c]"></div>
 
-                    <div className="bg-[#1a1a3f]/80 backdrop-blur-sm p-4 md:p-6 rounded-xl 
-                                transition-all duration-300 transform hover:-translate-y-2 
-                                hover:shadow-xl hover:shadow-[#40c057]/20 
-                                hover:bg-[#2a2a4f] border border-[#40c057]/20">
-                      <div className="flex flex-col gap-2">
-                        <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                          <h3 className="text-xl md:text-2xl font-bold text-[#40c057] group-hover:text-[#69db7c] transition-colors">
-                            {exp.title}
-                          </h3>
-                          <span className="text-sm px-3 py-1 bg-[#40c057]/20 rounded-full text-[#40c057] w-fit mt-1 md:mt-0">
-                            {exp.period}
-                          </span>
-                        </div>
-                        <p className="text-[#40c057]/90 text-base md:text-lg mb-2">{exp.company}</p>
-                        <p className="text-gray-300 group-hover:text-white transition-colors text-sm md:text-base">
-                          {exp.description}
-                        </p>
-                        
-                        {/* Tags de compétences */}
-                        <div className="flex flex-wrap gap-2 mt-3">
-                          {exp.skills.map((skill, idx) => (
-                            <span 
-                              key={idx}
-                              className="text-xs md:text-sm px-2 md:px-3 py-1 bg-[#40c057]/10 rounded-full
-                                     text-[#40c057] hover:bg-[#40c057]/20 transition-all
-                                     transform hover:-translate-y-1 cursor-default"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+    <div className="bg-[#1a1a3f]/80 backdrop-blur-sm p-4 md:p-6 rounded-xl 
+                transition-all duration-300 transform hover:-translate-y-2 
+                hover:shadow-xl hover:shadow-[#40c057]/20 
+                hover:bg-[#2a2a4f] border border-[#40c057]/20">
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+          <h3 className="text-xl md:text-2xl font-bold text-[#40c057] group-hover:text-[#69db7c] transition-colors">
+            {exp.title}
+          </h3>
+          <span className="text-sm px-3 py-1 bg-[#40c057]/20 rounded-full text-[#40c057] w-fit mt-1 md:mt-0">
+            {exp.period}
+          </span>
+        </div>
+        <p className="text-[#40c057]/90 text-base md:text-lg mb-2">{exp.company}</p>
+        <p className="text-gray-300 group-hover:text-white transition-colors text-sm md:text-base">
+          {exp.description}
+        </p>
+        
+        {/* Tags de compétences */}
+        <div className="flex flex-wrap gap-2 mt-3">
+          {exp.skills.map((skill, idx) => (
+            <span 
+              key={idx}
+              className="text-xs md:text-sm px-2 md:px-3 py-1 bg-[#40c057]/10 rounded-full
+                     text-[#40c057] hover:bg-[#40c057]/20 transition-all
+                     transform hover:-translate-y-1 cursor-default"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+))}
+
+
+
+
+
+
+
+
+
             </div>
           </div>
         </div>
@@ -760,6 +776,7 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+
             </div>
 
             <div className="relative flex justify-center order-2 mt-8 md:mt-0">
