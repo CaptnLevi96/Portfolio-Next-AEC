@@ -1048,13 +1048,13 @@ export default function Home() {
 
           {/* Bouton Détails sur les projets */}
           <div className="mt-10 md:mt-16 flex justify-center">
-            <Link href="/projects" legacyBehavior>
-              <a className="group bg-[#40c057] text-white px-6 md:px-10 py-3 md:py-4 rounded-full hover:bg-[#2b8a3e] transition-all hover:shadow-lg relative overflow-hidden inline-flex items-center gap-2 text-sm md:text-base">
-                <span className="relative z-10 font-bold">Détails sur les projets</span>
-                <FaArrowRight className="relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
-                <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
-              </a>
-            </Link>
+          <Link
+  href="/projects"
+  className="group bg-[#40c057] text-white px-6 md:px-10 py-3 md:py-4 rounded-full hover:bg-[#2b8a3e] transition-all hover:shadow-lg relative overflow-hidden inline-flex items-center gap-2 text-sm md:text-base"
+>
+  <span className="relative z-10 font-bold">Détails sur les projets</span>
+  <FaArrowRight className="relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
+</Link>
           </div>
         </div>
       </section>
