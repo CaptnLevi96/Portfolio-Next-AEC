@@ -703,7 +703,7 @@ export default function Home() {
                   {
                     title: "AEC - Web Development for Transactional Sites",
                     school: "Collège Ahuntsic",
-                    period: "2024 - 2025 (ongoing)",
+                    period: "2025",
                     description: "In-depth training in web development and programming",
                     skills: ["React", "Node.js", "Next.js", "TypeScript", "SQL"]
                   },
