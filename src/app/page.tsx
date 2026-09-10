@@ -605,6 +605,15 @@ export default function Home() {
                 <div className="absolute left-4 md:left-6 top-8 bottom-8 w-1 bg-gradient-to-b from-[#40c057] to-[#69db7c] rounded-full"></div>
 
                 {[
+
+{
+  title: "Intégrateur Web",
+  company: "Turbulent/Banque Nationale",
+  period: "Août 2025 - Présent",
+  description: "Intégration technique de contenus web sur Adobe Experience Manager pour le domaine bancaire, en respectant les standards d'accessibilité (WCAG), de SEO et de qualité d'intégration.",
+  skills: ["WCAG", "SEO", "Adobe Experience Manager", "UX", "Documentation"]
+},
+
   {
     title: "Stagiaire Analyste Web",
     company: "Le Magasin des Commerçants S&P Ltée",
