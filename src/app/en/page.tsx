@@ -531,7 +531,7 @@ export default function Home() {
                     <div className="absolute inset-0 h-full w-0 bg-gradient-to-r from-[#69db7c] to-[#40c057] transition-all duration-300 group-hover:w-full"></div>
                   </button>
                   <a 
-                    href="/LeviLosekeCVENG.pdf" 
+                    href="/LeviLosekeCVEN.pdf" 
                     download
                     className="group border-2 border-[#40c057] text-[#1a472a] px-6 sm:px-10 py-3 sm:py-4 rounded-full hover:bg-[#40c057] hover:text-white transition-all hover:shadow-lg relative overflow-hidden inline-flex items-center justify-center w-full sm:w-auto"
                   >
