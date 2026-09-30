@@ -121,11 +121,11 @@ export default function Home() {
       url: "https://www.behance.net/gallery/195433225/UIUX-design-for-a-e-book-application-named-Buqs" 
     },
     {
-      title: "Three-dimensional Art Poster",
-      description: "A dynamic illustration featuring 3D art, featuring metallic typography, floating shapes, and a vibrant cosmic background.",
+      title: "Tenwise",
+      description: "A free desktop web app that centralizes rent tracking, tenants, and lease deadlines for independent landlords.",
       image: "/3D.png",
       category: "Graphic design / UI-UX",
-      tags: ["Adobe Illustrator", "Adobe Photoshop"],
+      tags: ["UX Research", "Figma", "Competitive Analysis", "UI Design"],
       url: "https://www.behance.net/gallery/203123971/3D-Art-Poster" 
     },
     {
