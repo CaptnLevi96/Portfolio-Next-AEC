@@ -137,12 +137,12 @@ export default function Home() {
       url: "https://www.behance.net/gallery/195433225/UIUX-design-for-a-e-book-application-named-Buqs"
     },
     {
-      title: "Poster Art tridimensionnelle",
-      description: "Une illustration dynamique mettant en avant l'art 3D, avec une typographie métallisée, des formes flottantes et un fond cosmique vibrant.",
-      image: "/3D.png",
+      title: "Tenwise",
+      description: "Application web desktop gratuite qui centralise le suivi des loyers, locataires et baux pour les propriétaires indépendants.",
+      image: "/Dashboard.png",
       category: "Design graphique / UI-UX",
-      tags: ["Adobe Illustrator", "Adobe Photoshop"],
-      url: "https://www.behance.net/gallery/203123971/3D-Art-Poster"
+      tags: ["UX Research", "Figma", "Analyse concurrentielle", "Design UI"],
+      url: "https://levilosekeuxportfolio.framer.website/projets/projet-4/projet-4"
     },
     {
       title: "Ancien portfolio mobile",
