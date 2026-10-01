@@ -51,14 +51,16 @@ export default function Projects() {
             
             {/* Title and introduction */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 md:mb-12 text-center bg-gradient-to-r from-[#1a472a] to-[#40c057] text-transparent bg-clip-text">
-              Web Project Details
+              Project Details
             </h1>
             
             <p className="text-[#1a472a] text-center text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 sm:mb-16 md:mb-20 px-2">
-              Welcome to my web development universe! Explore my collection of 
-              projects and dive into the details of each creation. Click on a project to 
-              discover its complete story: the technologies I've mastered, the challenges I've 
-              overcome, and the innovative solutions I've created.
+              Welcome to my creative universe! Explore my collection of web
+              development and graphic design / UI-UX projects, and dive into
+              the details of each creation. Click on a project to discover
+              its complete story: the tools and technologies I've mastered,
+              the challenges I've overcome, and the solutions I've designed
+              and built.
             </p>
             
             {/* List of projects */}
@@ -218,6 +220,155 @@ export default function Projects() {
                     <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">Drizzle</span>
                     <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">Hono</span>
                     <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">PostgreSQL</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 7 - Graphic design / UI-UX */}
+              <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-10 items-center bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl">
+                <div className="w-full md:w-1/2 relative h-[200px] sm:h-[250px] md:h-[300px]">
+                  <Image 
+                    src="/africa.png"
+                    alt="The Motherland"
+                    fill
+                    className="object-cover rounded-lg sm:rounded-xl"
+                  />
+                </div>
+                <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                  <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-[#1a472a] mb-2 sm:mb-3 md:mb-4">The Motherland</h2>
+                  <p className="text-gray-700 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base">
+                    An illustration celebrating Africa, its identity, and its culture. A fusion of symbols, pan-African colors, and graphic elements for a vibrant tribute to the continent.
+                  </p>
+                  <p className="text-gray-700 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base">
+                    <strong className="text-[#40c057]">Challenges faced:</strong> Balancing a dense composition of cultural symbols and colors while keeping the overall illustration visually clear and cohesive.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">Figma</span>
+                    <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">Adobe Illustrator</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 8 - Graphic design / UI-UX */}
+              <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-10 items-center bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl">
+                <div className="w-full md:w-1/2 relative h-[200px] sm:h-[250px] md:h-[300px]">
+                  <Image 
+                    src="/recolte.png"
+                    alt="Recolte"
+                    fill
+                    className="object-cover rounded-lg sm:rounded-xl"
+                  />
+                </div>
+                <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                  <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-[#1a472a] mb-2 sm:mb-3 md:mb-4">Recolte</h2>
+                  <p className="text-gray-700 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base">
+                    Moodboard and final mockup of an organic grocery store website, built around a warm, natural visual identity.
+                  </p>
+                  <p className="text-gray-700 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base">
+                    <strong className="text-[#40c057]">Challenges faced:</strong> Translating a moodboard's mood and color palette into a consistent, ready-to-build UI design.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">Figma</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 9 - Graphic design / UI-UX */}
+              <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-10 items-center bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl">
+                <div className="w-full md:w-1/2 relative h-[200px] sm:h-[250px] md:h-[300px]">
+                  <Image 
+                    src="/LaSirene.png"
+                    alt="Je t'aime"
+                    fill
+                    className="object-cover rounded-lg sm:rounded-xl"
+                  />
+                </div>
+                <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                  <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-[#1a472a] mb-2 sm:mb-3 md:mb-4">Je t&apos;aime</h2>
+                  <p className="text-gray-700 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base">
+                    Multilingual mosaic fresco designed around the phrase &quot;I love you,&quot; created for the La Sirène reception hall in Laval.
+                  </p>
+                  <p className="text-gray-700 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base">
+                    <strong className="text-[#40c057]">Challenges faced:</strong> Arranging multiple languages and typographic styles into one harmonious mosaic layout readable at a large physical scale.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">Adobe Illustrator</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 10 - Graphic design / UI-UX */}
+              <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-10 items-center bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl">
+                <div className="w-full md:w-1/2 relative h-[200px] sm:h-[250px] md:h-[300px]">
+                  <Image 
+                    src="/buqs.png"
+                    alt="Buqs"
+                    fill
+                    className="object-cover rounded-lg sm:rounded-xl"
+                  />
+                </div>
+                <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                  <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-[#1a472a] mb-2 sm:mb-3 md:mb-4">Buqs</h2>
+                  <p className="text-gray-700 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base">
+                    UI/UX design of Buqs, an e-book app offering intuitive navigation, a modern interface, and customizable reading options.
+                  </p>
+                  <p className="text-gray-700 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base">
+                    <strong className="text-[#40c057]">Challenges faced:</strong> Designing a reading experience that stays simple and distraction-free while still exposing customization options users expect from an e-book app.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">Figma</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 11 - Graphic design / UI-UX */}
+              <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-10 items-center bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl">
+                <div className="w-full md:w-1/2 relative h-[200px] sm:h-[250px] md:h-[300px]">
+                  <Image 
+                    src="/3D.png"
+                    alt="Tenwise"
+                    fill
+                    className="object-cover rounded-lg sm:rounded-xl"
+                  />
+                </div>
+                <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                  <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-[#1a472a] mb-2 sm:mb-3 md:mb-4">Tenwise</h2>
+                  <p className="text-gray-700 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base">
+                    A free desktop web app that centralizes rent tracking, tenants, and lease deadlines for independent landlords, built on user interviews and competitive analysis.
+                  </p>
+                  <p className="text-gray-700 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base">
+                    <strong className="text-[#40c057]">Challenges faced:</strong> Turning scattered spreadsheet habits into a single, calm dashboard that surfaces what needs attention without overwhelming the landlord.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">UX Research</span>
+                    <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">Figma</span>
+                    <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">Competitive Analysis</span>
+                    <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">UI Design</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 12 - Graphic design / UI-UX */}
+              <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-10 items-center bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl">
+                <div className="w-full md:w-1/2 relative h-[200px] sm:h-[250px] md:h-[300px]">
+                  <Image 
+                    src="/portfolio.png"
+                    alt="Old mobile portfolio"
+                    fill
+                    className="object-cover rounded-lg sm:rounded-xl"
+                  />
+                </div>
+                <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                  <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-[#1a472a] mb-2 sm:mb-3 md:mb-4">Old Mobile Portfolio</h2>
+                  <p className="text-gray-700 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base">
+                    The Figma moodboard mockup of my previous web developer portfolio, which I designed using HTML, CSS, and JavaScript.
+                  </p>
+                  <p className="text-gray-700 mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base">
+                    <strong className="text-[#40c057]">Challenges faced:</strong> Designing a mobile-first layout that stayed readable and easy to navigate on small screens before any code was written.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">Figma</span>
+                    <span className="text-xs sm:text-sm px-2 sm:px-3 py-1 bg-[#40c057]/10 rounded-full text-[#1a472a]">Adobe Photoshop</span>
                   </div>
                 </div>
               </div>
