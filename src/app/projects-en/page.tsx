@@ -325,7 +325,7 @@ export default function Projects() {
               <div className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-10 items-center bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl">
                 <div className="w-full md:w-1/2 relative h-[200px] sm:h-[250px] md:h-[300px]">
                   <Image 
-                    src="/3D.png"
+                    src="/Dashboard.png"
                     alt="Tenwise"
                     fill
                     className="object-cover rounded-lg sm:rounded-xl"
